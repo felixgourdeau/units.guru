@@ -30,6 +30,7 @@ export const links = () => {
     ...layoutStyles(),
     ...fuelPriceConverterStyles(),
     { rel: "stylesheet", href: styles },
+    { rel: "manifest", href: "manifest.json" },
   ];
 };
 
