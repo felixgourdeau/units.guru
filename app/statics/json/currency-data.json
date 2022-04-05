@@ -1,0 +1,1739 @@
+[
+    {
+        "country": "AL",
+        "code": "ALL",
+        "symbol": "ALL",
+        "name": "Albanian Lek",
+        "dec": 0,
+        "lat": 41,
+        "lon": 20
+    },
+    {
+        "country": "DZ",
+        "code": "DZD",
+        "symbol": "DA",
+        "name": "Algerian Dinar",
+        "dec": 2,
+        "lat": 28,
+        "lon": 3
+    },
+    {
+        "country": "AD",
+        "code": "EUR",
+        "symbol": "€",
+        "name": "Euro",
+        "dec": 2,
+        "lat": 42.5,
+        "lon": 1.6
+    },
+    {
+        "country": "AR",
+        "code": "ARS",
+        "symbol": "AR$",
+        "name": "Argentine Peso",
+        "dec": 2,
+        "lat": -34,
+        "lon": -64
+    },
+    {
+        "country": "AM",
+        "code": "AMD",
+        "symbol": "AMD",
+        "name": "Armenian Dram",
+        "dec": 0,
+        "lat": 40,
+        "lon": 45
+    },
+    {
+        "country": "AU",
+        "code": "AUD",
+        "symbol": "AU$",
+        "name": "Australian Dollar",
+        "dec": 2,
+        "lat": -27,
+        "lon": 133
+    },
+    {
+        "country": "AT",
+        "code": "EUR",
+        "symbol": "€",
+        "name": "Euro",
+        "dec": 2,
+        "lat": 47.3333,
+        "lon": 13.3333
+    },
+    {
+        "country": "AZ",
+        "code": "AZN",
+        "symbol": "man.",
+        "name": "Azerbaijani Manat",
+        "dec": 2,
+        "lat": 40.5,
+        "lon": 47.5
+    },
+    {
+        "country": "BH",
+        "code": "BHD",
+        "symbol": "BD",
+        "name": "Bahraini Dinar",
+        "dec": 3,
+        "lat": 26,
+        "lon": 50.55
+    },
+    {
+        "country": "BD",
+        "code": "BDT",
+        "symbol": "Tk",
+        "name": "Bangladeshi Taka",
+        "dec": 2,
+        "lat": 24,
+        "lon": 90
+    },
+    {
+        "country": "BY",
+        "code": "BYR",
+        "symbol": "BYR",
+        "name": "Belarusian Ruble",
+        "dec": 0,
+        "lat": 53,
+        "lon": 28
+    },
+    {
+        "country": "BE",
+        "code": "EUR",
+        "symbol": "€",
+        "name": "Euro",
+        "dec": 2,
+        "lat": 50.8333,
+        "lon": 4
+    },
+    {
+        "country": "BZ",
+        "code": "BZD",
+        "symbol": "BZ$",
+        "name": "Belize Dollar",
+        "dec": 2,
+        "lat": 17.25,
+        "lon": -88.75
+    },
+    {
+        "country": "BJ",
+        "code": "XOF",
+        "symbol": "CFA",
+        "name": "CFA Franc BCEAO",
+        "dec": 0,
+        "lat": 9.5,
+        "lon": 2.25
+    },
+    {
+        "country": "BO",
+        "code": "BOB",
+        "symbol": "Bs",
+        "name": "Bolivian Boliviano",
+        "dec": 2,
+        "lat": -17,
+        "lon": -65
+    },
+    {
+        "country": "BA",
+        "code": "BAM",
+        "symbol": "KM",
+        "name": "Bosnia-Herzegovina Convertible Mark",
+        "dec": 2,
+        "lat": 44,
+        "lon": 18
+    },
+    {
+        "country": "BW",
+        "code": "BWP",
+        "symbol": "BWP",
+        "name": "Botswanan Pula",
+        "dec": 2,
+        "lat": -22,
+        "lon": 24
+    },
+    {
+        "country": "BV",
+        "code": "NOK",
+        "symbol": "Nkr",
+        "name": "Norwegian Krone",
+        "dec": 2,
+        "lat": -54.4333,
+        "lon": 3.4
+    },
+    {
+        "country": "BR",
+        "code": "BRL",
+        "symbol": "R$",
+        "name": "Brazilian Real",
+        "dec": 2,
+        "lat": -10,
+        "lon": -55
+    },
+    {
+        "country": "IO",
+        "code": "USD",
+        "symbol": "$",
+        "name": "US Dollar",
+        "dec": 2,
+        "lat": -6,
+        "lon": 71.5
+    },
+    {
+        "country": "BN",
+        "code": "BND",
+        "symbol": "BN$",
+        "name": "Brunei Dollar",
+        "dec": 2,
+        "lat": 4.5,
+        "lon": 114.6667
+    },
+    {
+        "country": "BG",
+        "code": "BGN",
+        "symbol": "BGN",
+        "name": "Bulgarian Lev",
+        "dec": 2,
+        "lat": 43,
+        "lon": 25
+    },
+    {
+        "country": "BF",
+        "code": "XOF",
+        "symbol": "CFA",
+        "name": "CFA Franc BCEAO",
+        "dec": 0,
+        "lat": 13,
+        "lon": -2
+    },
+    {
+        "country": "BI",
+        "code": "BIF",
+        "symbol": "FBu",
+        "name": "Burundian Franc",
+        "dec": 0,
+        "lat": -3.5,
+        "lon": 30
+    },
+    {
+        "country": "KH",
+        "code": "KHR",
+        "symbol": "KHR",
+        "name": "Cambodian Riel",
+        "dec": 2,
+        "lat": 13,
+        "lon": 105
+    },
+    {
+        "country": "CM",
+        "code": "XAF",
+        "symbol": "FCFA",
+        "name": "CFA Franc BEAC",
+        "dec": 0,
+        "lat": 6,
+        "lon": 12
+    },
+    {
+        "country": "CA",
+        "code": "CAD",
+        "symbol": "CA$",
+        "name": "Canadian Dollar",
+        "dec": 2,
+        "lat": 60,
+        "lon": -95
+    },
+    {
+        "country": "CV",
+        "code": "CVE",
+        "symbol": "CV$",
+        "name": "Cape Verdean Escudo",
+        "dec": 2,
+        "lat": 16,
+        "lon": -24
+    },
+    {
+        "country": "CF",
+        "code": "XAF",
+        "symbol": "FCFA",
+        "name": "CFA Franc BEAC",
+        "dec": 0,
+        "lat": 7,
+        "lon": 21
+    },
+    {
+        "country": "TD",
+        "code": "XAF",
+        "symbol": "FCFA",
+        "name": "CFA Franc BEAC",
+        "dec": 0,
+        "lat": 15,
+        "lon": 19
+    },
+    {
+        "country": "CL",
+        "code": "CLP",
+        "symbol": "CL$",
+        "name": "Chilean Peso",
+        "dec": 0,
+        "lat": -30,
+        "lon": -71
+    },
+    {
+        "country": "CN",
+        "code": "CNY",
+        "symbol": "CN¥",
+        "name": "Chinese Yuan",
+        "dec": 2,
+        "lat": 35,
+        "lon": 105
+    },
+    {
+        "country": "CX",
+        "code": "AUD",
+        "symbol": "AU$",
+        "name": "Australian Dollar",
+        "dec": 2,
+        "lat": -10.5,
+        "lon": 105.6667
+    },
+    {
+        "country": "CC",
+        "code": "AUD",
+        "symbol": "AU$",
+        "name": "Australian Dollar",
+        "dec": 2,
+        "lat": -12.5,
+        "lon": 96.8333
+    },
+    {
+        "country": "CO",
+        "code": "COP",
+        "symbol": "CO$",
+        "name": "Colombian Peso",
+        "dec": 0,
+        "lat": 4,
+        "lon": -72
+    },
+    {
+        "country": "KM",
+        "code": "KMF",
+        "symbol": "CF",
+        "name": "Comorian Franc",
+        "dec": 0,
+        "lat": -12.1667,
+        "lon": 44.25
+    },
+    {
+        "country": "CG",
+        "code": "XAF",
+        "symbol": "FCFA",
+        "name": "CFA Franc BEAC",
+        "dec": 0,
+        "lat": -1,
+        "lon": 15
+    },
+    {
+        "country": "CD",
+        "code": "CDF",
+        "symbol": "CDF",
+        "name": "Congolese Franc",
+        "dec": 2,
+        "lat": 0,
+        "lon": 25
+    },
+    {
+        "country": "CK",
+        "code": "NZD",
+        "symbol": "NZ$",
+        "name": "New Zealand Dollar",
+        "dec": 2,
+        "lat": -21.2333,
+        "lon": -159.7667
+    },
+    {
+        "country": "CR",
+        "code": "CRC",
+        "symbol": "₡",
+        "name": "Costa Rican Colón",
+        "dec": 0,
+        "lat": 10,
+        "lon": -84
+    },
+    {
+        "country": "CI",
+        "code": "XOF",
+        "symbol": "CFA",
+        "name": "CFA Franc BCEAO",
+        "dec": 0,
+        "lat": 8,
+        "lon": -5
+    },
+    {
+        "country": "HR",
+        "code": "HRK",
+        "symbol": "kn",
+        "name": "Croatian Kuna",
+        "dec": 2,
+        "lat": 45.1667,
+        "lon": 15.5
+    },
+    {
+        "country": "CY",
+        "code": "EUR",
+        "symbol": "€",
+        "name": "Euro",
+        "dec": 2,
+        "lat": 35,
+        "lon": 33
+    },
+    {
+        "country": "CZ",
+        "code": "CZK",
+        "symbol": "Kč",
+        "name": "Czech Republic Koruna",
+        "dec": 2,
+        "lat": 49.75,
+        "lon": 15.5
+    },
+    {
+        "country": "DK",
+        "code": "DKK",
+        "symbol": "Dkr",
+        "name": "Danish Krone",
+        "dec": 2,
+        "lat": 56,
+        "lon": 10
+    },
+    {
+        "country": "DJ",
+        "code": "DJF",
+        "symbol": "Fdj",
+        "name": "Djiboutian Franc",
+        "dec": 0,
+        "lat": 11.5,
+        "lon": 43
+    },
+    {
+        "country": "DO",
+        "code": "DOP",
+        "symbol": "RD$",
+        "name": "Dominican Peso",
+        "dec": 2,
+        "lat": 19,
+        "lon": -70.6667
+    },
+    {
+        "country": "EC",
+        "code": "USD",
+        "symbol": "$",
+        "name": "US Dollar",
+        "dec": 2,
+        "lat": -2,
+        "lon": -77.5
+    },
+    {
+        "country": "EG",
+        "code": "EGP",
+        "symbol": "EGP",
+        "name": "Egyptian Pound",
+        "dec": 2,
+        "lat": 27,
+        "lon": 30
+    },
+    {
+        "country": "SV",
+        "code": "USD",
+        "symbol": "$",
+        "name": "US Dollar",
+        "dec": 2,
+        "lat": 13.8333,
+        "lon": -88.9167
+    },
+    {
+        "country": "GQ",
+        "code": "XAF",
+        "symbol": "FCFA",
+        "name": "CFA Franc BEAC",
+        "dec": 0,
+        "lat": 2,
+        "lon": 10
+    },
+    {
+        "country": "ER",
+        "code": "ERN",
+        "symbol": "Nfk",
+        "name": "Eritrean Nakfa",
+        "dec": 2,
+        "lat": 15,
+        "lon": 39
+    },
+    {
+        "country": "EE",
+        "code": "EUR",
+        "symbol": "€",
+        "name": "Euro",
+        "dec": 2,
+        "lat": 59,
+        "lon": 26
+    },
+    {
+        "country": "ET",
+        "code": "ETB",
+        "symbol": "Br",
+        "name": "Ethiopian Birr",
+        "dec": 2,
+        "lat": 8,
+        "lon": 38
+    },
+    {
+        "country": "FO",
+        "code": "DKK",
+        "symbol": "Dkr",
+        "name": "Danish Krone",
+        "dec": 2,
+        "lat": 62,
+        "lon": -7
+    },
+    {
+        "country": "FI",
+        "code": "EUR",
+        "symbol": "€",
+        "name": "Euro",
+        "dec": 2,
+        "lat": 64,
+        "lon": 26
+    },
+    {
+        "country": "FR",
+        "code": "EUR",
+        "symbol": "€",
+        "name": "Euro",
+        "dec": 2,
+        "lat": 46,
+        "lon": 2
+    },
+    {
+        "country": "GF",
+        "code": "EUR",
+        "symbol": "€",
+        "name": "Euro",
+        "dec": 2,
+        "lat": 4,
+        "lon": -53
+    },
+    {
+        "country": "TF",
+        "code": "EUR",
+        "symbol": "€",
+        "name": "Euro",
+        "dec": 2,
+        "lat": -43,
+        "lon": 67
+    },
+    {
+        "country": "GA",
+        "code": "XAF",
+        "symbol": "FCFA",
+        "name": "CFA Franc BEAC",
+        "dec": 0,
+        "lat": -1,
+        "lon": 11.75
+    },
+    {
+        "country": "GE",
+        "code": "GEL",
+        "symbol": "GEL",
+        "name": "Georgian Lari",
+        "dec": 2,
+        "lat": 42,
+        "lon": 43.5
+    },
+    {
+        "country": "DE",
+        "code": "EUR",
+        "symbol": "€",
+        "name": "Euro",
+        "dec": 2,
+        "lat": 51,
+        "lon": 9
+    },
+    {
+        "country": "GH",
+        "code": "GHS",
+        "symbol": "GH₵",
+        "name": "Ghanaian Cedi",
+        "dec": 2,
+        "lat": 8,
+        "lon": -2
+    },
+    {
+        "country": "GR",
+        "code": "EUR",
+        "symbol": "€",
+        "name": "Euro",
+        "dec": 2,
+        "lat": 39,
+        "lon": 22
+    },
+    {
+        "country": "GL",
+        "code": "DKK",
+        "symbol": "Dkr",
+        "name": "Danish Krone",
+        "dec": 2,
+        "lat": 72,
+        "lon": -40
+    },
+    {
+        "country": "GP",
+        "code": "EUR",
+        "symbol": "€",
+        "name": "Euro",
+        "dec": 2,
+        "lat": 16.25,
+        "lon": -61.5833
+    },
+    {
+        "country": "GU",
+        "code": "USD",
+        "symbol": "$",
+        "name": "US Dollar",
+        "dec": 2,
+        "lat": 13.4667,
+        "lon": 144.7833
+    },
+    {
+        "country": "GT",
+        "code": "GTQ",
+        "symbol": "GTQ",
+        "name": "Guatemalan Quetzal",
+        "dec": 2,
+        "lat": 15.5,
+        "lon": -90.25
+    },
+    {
+        "country": "GG",
+        "code": "GBP",
+        "symbol": "£",
+        "name": "British Pound Sterling",
+        "dec": 2,
+        "lat": 49.5,
+        "lon": -2.56
+    },
+    {
+        "country": "GN",
+        "code": "GNF",
+        "symbol": "FG",
+        "name": "Guinean Franc",
+        "dec": 0,
+        "lat": 11,
+        "lon": -10
+    },
+    {
+        "country": "GW",
+        "code": "XOF",
+        "symbol": "CFA",
+        "name": "CFA Franc BCEAO",
+        "dec": 0,
+        "lat": 12,
+        "lon": -15
+    },
+    {
+        "country": "HM",
+        "code": "AUD",
+        "symbol": "AU$",
+        "name": "Australian Dollar",
+        "dec": 2,
+        "lat": -53.1,
+        "lon": 72.5167
+    },
+    {
+        "country": "VA",
+        "code": "EUR",
+        "symbol": "€",
+        "name": "Euro",
+        "dec": 2,
+        "lat": 41.9,
+        "lon": 12.45
+    },
+    {
+        "country": "HN",
+        "code": "HNL",
+        "symbol": "HNL",
+        "name": "Honduran Lempira",
+        "dec": 2,
+        "lat": 15,
+        "lon": -86.5
+    },
+    {
+        "country": "HK",
+        "code": "HKD",
+        "symbol": "HK$",
+        "name": "Hong Kong Dollar",
+        "dec": 2,
+        "lat": 22.25,
+        "lon": 114.1667
+    },
+    {
+        "country": "HU",
+        "code": "HUF",
+        "symbol": "Ft",
+        "name": "Hungarian Forint",
+        "dec": 0,
+        "lat": 47,
+        "lon": 20
+    },
+    {
+        "country": "IS",
+        "code": "ISK",
+        "symbol": "Ikr",
+        "name": "Icelandic Króna",
+        "dec": 0,
+        "lat": 65,
+        "lon": -18
+    },
+    {
+        "country": "IN",
+        "code": "INR",
+        "symbol": "Rs",
+        "name": "Indian Rupee",
+        "dec": 2,
+        "lat": 20,
+        "lon": 77
+    },
+    {
+        "country": "ID",
+        "code": "IDR",
+        "symbol": "Rp",
+        "name": "Indonesian Rupiah",
+        "dec": 0,
+        "lat": -5,
+        "lon": 120
+    },
+    {
+        "country": "IR",
+        "code": "IRR",
+        "symbol": "IRR",
+        "name": "Iranian Rial",
+        "dec": 0,
+        "lat": 32,
+        "lon": 53
+    },
+    {
+        "country": "IQ",
+        "code": "IQD",
+        "symbol": "IQD",
+        "name": "Iraqi Dinar",
+        "dec": 0,
+        "lat": 33,
+        "lon": 44
+    },
+    {
+        "country": "IE",
+        "code": "EUR",
+        "symbol": "€",
+        "name": "Euro",
+        "dec": 2,
+        "lat": 53,
+        "lon": -8
+    },
+    {
+        "country": "IM",
+        "code": "GBP",
+        "symbol": "£",
+        "name": "British Pound Sterling",
+        "dec": 2,
+        "lat": 54.23,
+        "lon": -4.55
+    },
+    {
+        "country": "IL",
+        "code": "ILS",
+        "symbol": "₪",
+        "name": "Israeli New Sheqel",
+        "dec": 2,
+        "lat": 31.5,
+        "lon": 34.75
+    },
+    {
+        "country": "IT",
+        "code": "EUR",
+        "symbol": "€",
+        "name": "Euro",
+        "dec": 2,
+        "lat": 42.8333,
+        "lon": 12.8333
+    },
+    {
+        "country": "JM",
+        "code": "JMD",
+        "symbol": "J$",
+        "name": "Jamaican Dollar",
+        "dec": 2,
+        "lat": 18.25,
+        "lon": -77.5
+    },
+    {
+        "country": "JP",
+        "code": "JPY",
+        "symbol": "¥",
+        "name": "Japanese Yen",
+        "dec": 0,
+        "lat": 36,
+        "lon": 138
+    },
+    {
+        "country": "JE",
+        "code": "GBP",
+        "symbol": "£",
+        "name": "British Pound Sterling",
+        "dec": 2,
+        "lat": 49.21,
+        "lon": -2.13
+    },
+    {
+        "country": "JO",
+        "code": "JOD",
+        "symbol": "JD",
+        "name": "Jordanian Dinar",
+        "dec": 3,
+        "lat": 31,
+        "lon": 36
+    },
+    {
+        "country": "KZ",
+        "code": "KZT",
+        "symbol": "KZT",
+        "name": "Kazakhstani Tenge",
+        "dec": 2,
+        "lat": 48,
+        "lon": 68
+    },
+    {
+        "country": "KE",
+        "code": "KES",
+        "symbol": "Ksh",
+        "name": "Kenyan Shilling",
+        "dec": 2,
+        "lat": 1,
+        "lon": 38
+    },
+    {
+        "country": "KI",
+        "code": "AUD",
+        "symbol": "AU$",
+        "name": "Australian Dollar",
+        "dec": 2,
+        "lat": 1.4167,
+        "lon": 173
+    },
+    {
+        "country": "KR",
+        "code": "KRW",
+        "symbol": "₩",
+        "name": "South Korean Won",
+        "dec": 0,
+        "lat": 37,
+        "lon": 127.5
+    },
+    {
+        "country": "KW",
+        "code": "KWD",
+        "symbol": "KD",
+        "name": "Kuwaiti Dinar",
+        "dec": 3,
+        "lat": 29.3375,
+        "lon": 47.6581
+    },
+    {
+        "country": "LV",
+        "code": "EUR",
+        "symbol": "€",
+        "name": "Euro",
+        "dec": 2,
+        "lat": 57,
+        "lon": 25
+    },
+    {
+        "country": "LB",
+        "code": "LBP",
+        "symbol": "LB£",
+        "name": "Lebanese Pound",
+        "dec": 0,
+        "lat": 33.8333,
+        "lon": 35.8333
+    },
+    {
+        "country": "LY",
+        "code": "LYD",
+        "symbol": "LD",
+        "name": "Libyan Dinar",
+        "dec": 3,
+        "lat": 25,
+        "lon": 17
+    },
+    {
+        "country": "LI",
+        "code": "CHF",
+        "symbol": "CHF",
+        "name": "Swiss Franc",
+        "dec": 2,
+        "lat": 47.1667,
+        "lon": 9.5333
+    },
+    {
+        "country": "LT",
+        "code": "LTL",
+        "symbol": "Lt",
+        "name": "Lithuanian Litas",
+        "dec": 2,
+        "lat": 56,
+        "lon": 24
+    },
+    {
+        "country": "LU",
+        "code": "EUR",
+        "symbol": "€",
+        "name": "Euro",
+        "dec": 2,
+        "lat": 49.75,
+        "lon": 6.1667
+    },
+    {
+        "country": "MO",
+        "code": "MOP",
+        "symbol": "MOP$",
+        "name": "Macanese Pataca",
+        "dec": 2,
+        "lat": 22.1667,
+        "lon": 113.55
+    },
+    {
+        "country": "MK",
+        "code": "MKD",
+        "symbol": "MKD",
+        "name": "Macedonian Denar",
+        "dec": 2,
+        "lat": 41.8333,
+        "lon": 22
+    },
+    {
+        "country": "MG",
+        "code": "MGA",
+        "symbol": "MGA",
+        "name": "Malagasy Ariary",
+        "dec": 0,
+        "lat": -20,
+        "lon": 47
+    },
+    {
+        "country": "MY",
+        "code": "MYR",
+        "symbol": "RM",
+        "name": "Malaysian Ringgit",
+        "dec": 2,
+        "lat": 2.5,
+        "lon": 112.5
+    },
+    {
+        "country": "ML",
+        "code": "XOF",
+        "symbol": "CFA",
+        "name": "CFA Franc BCEAO",
+        "dec": 0,
+        "lat": 17,
+        "lon": -4
+    },
+    {
+        "country": "MT",
+        "code": "EUR",
+        "symbol": "€",
+        "name": "Euro",
+        "dec": 2,
+        "lat": 35.8333,
+        "lon": 14.5833
+    },
+    {
+        "country": "MH",
+        "code": "USD",
+        "symbol": "$",
+        "name": "US Dollar",
+        "dec": 2,
+        "lat": 9,
+        "lon": 168
+    },
+    {
+        "country": "MQ",
+        "code": "EUR",
+        "symbol": "€",
+        "name": "Euro",
+        "dec": 2,
+        "lat": 14.6667,
+        "lon": -61
+    },
+    {
+        "country": "MU",
+        "code": "MUR",
+        "symbol": "MURs",
+        "name": "Mauritian Rupee",
+        "dec": 0,
+        "lat": -20.2833,
+        "lon": 57.55
+    },
+    {
+        "country": "YT",
+        "code": "EUR",
+        "symbol": "€",
+        "name": "Euro",
+        "dec": 2,
+        "lat": -12.8333,
+        "lon": 45.1667
+    },
+    {
+        "country": "MX",
+        "code": "MXN",
+        "symbol": "MX$",
+        "name": "Mexican Peso",
+        "dec": 2,
+        "lat": 23,
+        "lon": -102
+    },
+    {
+        "country": "FM",
+        "code": "USD",
+        "symbol": "$",
+        "name": "US Dollar",
+        "dec": 2,
+        "lat": 6.9167,
+        "lon": 158.25
+    },
+    {
+        "country": "MD",
+        "code": "MDL",
+        "symbol": "MDL",
+        "name": "Moldovan Leu",
+        "dec": 2,
+        "lat": 47,
+        "lon": 29
+    },
+    {
+        "country": "MC",
+        "code": "EUR",
+        "symbol": "€",
+        "name": "Euro",
+        "dec": 2,
+        "lat": 43.7333,
+        "lon": 7.4
+    },
+    {
+        "country": "ME",
+        "code": "EUR",
+        "symbol": "€",
+        "name": "Euro",
+        "dec": 2,
+        "lat": 42,
+        "lon": 19
+    },
+    {
+        "country": "MA",
+        "code": "MAD",
+        "symbol": "MAD",
+        "name": "Moroccan Dirham",
+        "dec": 2,
+        "lat": 32,
+        "lon": -5
+    },
+    {
+        "country": "MZ",
+        "code": "MZN",
+        "symbol": "MTn",
+        "name": "Mozambican Metical",
+        "dec": 2,
+        "lat": -18.25,
+        "lon": 35
+    },
+    {
+        "country": "MM",
+        "code": "MMK",
+        "symbol": "MMK",
+        "name": "Myanma Kyat",
+        "dec": 0,
+        "lat": 22,
+        "lon": 98
+    },
+    {
+        "country": "NA",
+        "code": "NAD",
+        "symbol": "N$",
+        "name": "Namibian Dollar",
+        "dec": 2,
+        "lat": -22,
+        "lon": 17
+    },
+    {
+        "country": "NR",
+        "code": "AUD",
+        "symbol": "AU$",
+        "name": "Australian Dollar",
+        "dec": 2,
+        "lat": -0.5333,
+        "lon": 166.9167
+    },
+    {
+        "country": "NP",
+        "code": "NPR",
+        "symbol": "NPRs",
+        "name": "Nepalese Rupee",
+        "dec": 2,
+        "lat": 28,
+        "lon": 84
+    },
+    {
+        "country": "NL",
+        "code": "EUR",
+        "symbol": "€",
+        "name": "Euro",
+        "dec": 2,
+        "lat": 52.5,
+        "lon": 5.75
+    },
+    {
+        "country": "NZ",
+        "code": "NZD",
+        "symbol": "NZ$",
+        "name": "New Zealand Dollar",
+        "dec": 2,
+        "lat": -41,
+        "lon": 174
+    },
+    {
+        "country": "NI",
+        "code": "NIO",
+        "symbol": "C$",
+        "name": "Nicaraguan Córdoba",
+        "dec": 2,
+        "lat": 13,
+        "lon": -85
+    },
+    {
+        "country": "NE",
+        "code": "XOF",
+        "symbol": "CFA",
+        "name": "CFA Franc BCEAO",
+        "dec": 0,
+        "lat": 16,
+        "lon": 8
+    },
+    {
+        "country": "NG",
+        "code": "NGN",
+        "symbol": "₦",
+        "name": "Nigerian Naira",
+        "dec": 2,
+        "lat": 10,
+        "lon": 8
+    },
+    {
+        "country": "NU",
+        "code": "NZD",
+        "symbol": "NZ$",
+        "name": "New Zealand Dollar",
+        "dec": 2,
+        "lat": -19.0333,
+        "lon": -169.8667
+    },
+    {
+        "country": "NF",
+        "code": "AUD",
+        "symbol": "AU$",
+        "name": "Australian Dollar",
+        "dec": 2,
+        "lat": -29.0333,
+        "lon": 167.95
+    },
+    {
+        "country": "MP",
+        "code": "USD",
+        "symbol": "$",
+        "name": "US Dollar",
+        "dec": 2,
+        "lat": 15.2,
+        "lon": 145.75
+    },
+    {
+        "country": "NO",
+        "code": "NOK",
+        "symbol": "Nkr",
+        "name": "Norwegian Krone",
+        "dec": 2,
+        "lat": 62,
+        "lon": 10
+    },
+    {
+        "country": "OM",
+        "code": "OMR",
+        "symbol": "OMR",
+        "name": "Omani Rial",
+        "dec": 3,
+        "lat": 21,
+        "lon": 57
+    },
+    {
+        "country": "PK",
+        "code": "PKR",
+        "symbol": "PKRs",
+        "name": "Pakistani Rupee",
+        "dec": 0,
+        "lat": 30,
+        "lon": 70
+    },
+    {
+        "country": "PW",
+        "code": "USD",
+        "symbol": "$",
+        "name": "US Dollar",
+        "dec": 2,
+        "lat": 7.5,
+        "lon": 134.5
+    },
+    {
+        "country": "PS",
+        "code": "ILS",
+        "symbol": "₪",
+        "name": "Israeli New Sheqel",
+        "dec": 2,
+        "lat": 32,
+        "lon": 35.25
+    },
+    {
+        "country": "PA",
+        "code": "PAB",
+        "symbol": "B/.",
+        "name": "Panamanian Balboa",
+        "dec": 2,
+        "lat": 9,
+        "lon": -80
+    },
+    {
+        "country": "PY",
+        "code": "PYG",
+        "symbol": "₲",
+        "name": "Paraguayan Guarani",
+        "dec": 0,
+        "lat": -23,
+        "lon": -58
+    },
+    {
+        "country": "PE",
+        "code": "PEN",
+        "symbol": "S/.",
+        "name": "Peruvian Nuevo Sol",
+        "dec": 2,
+        "lat": -10,
+        "lon": -76
+    },
+    {
+        "country": "PH",
+        "code": "PHP",
+        "symbol": "₱",
+        "name": "Philippine Peso",
+        "dec": 2,
+        "lat": 13,
+        "lon": 122
+    },
+    {
+        "country": "PN",
+        "code": "NZD",
+        "symbol": "NZ$",
+        "name": "New Zealand Dollar",
+        "dec": 2,
+        "lat": -24.7,
+        "lon": -127.4
+    },
+    {
+        "country": "PL",
+        "code": "PLN",
+        "symbol": "zł",
+        "name": "Polish Zloty",
+        "dec": 2,
+        "lat": 52,
+        "lon": 20
+    },
+    {
+        "country": "PT",
+        "code": "EUR",
+        "symbol": "€",
+        "name": "Euro",
+        "dec": 2,
+        "lat": 39.5,
+        "lon": -8
+    },
+    {
+        "country": "PR",
+        "code": "USD",
+        "symbol": "$",
+        "name": "US Dollar",
+        "dec": 2,
+        "lat": 18.25,
+        "lon": -66.5
+    },
+    {
+        "country": "QA",
+        "code": "QAR",
+        "symbol": "QR",
+        "name": "Qatari Rial",
+        "dec": 2,
+        "lat": 25.5,
+        "lon": 51.25
+    },
+    {
+        "country": "RE",
+        "code": "EUR",
+        "symbol": "€",
+        "name": "Euro",
+        "dec": 2,
+        "lat": -21.1,
+        "lon": 55.6
+    },
+    {
+        "country": "RO",
+        "code": "RON",
+        "symbol": "RON",
+        "name": "Romanian Leu",
+        "dec": 2,
+        "lat": 46,
+        "lon": 25
+    },
+    {
+        "country": "RU",
+        "code": "RUB",
+        "symbol": "RUB",
+        "name": "Russian Ruble",
+        "dec": 2,
+        "lat": 60,
+        "lon": 100
+    },
+    {
+        "country": "RW",
+        "code": "RWF",
+        "symbol": "RWF",
+        "name": "Rwandan Franc",
+        "dec": 0,
+        "lat": -2,
+        "lon": 30
+    },
+    {
+        "country": "PM",
+        "code": "EUR",
+        "symbol": "€",
+        "name": "Euro",
+        "dec": 2,
+        "lat": 46.8333,
+        "lon": -56.3333
+    },
+    {
+        "country": "SM",
+        "code": "EUR",
+        "symbol": "€",
+        "name": "Euro",
+        "dec": 2,
+        "lat": 43.7667,
+        "lon": 12.4167
+    },
+    {
+        "country": "SA",
+        "code": "SAR",
+        "symbol": "SR",
+        "name": "Saudi Riyal",
+        "dec": 2,
+        "lat": 25,
+        "lon": 45
+    },
+    {
+        "country": "SN",
+        "code": "XOF",
+        "symbol": "CFA",
+        "name": "CFA Franc BCEAO",
+        "dec": 0,
+        "lat": 14,
+        "lon": -14
+    },
+    {
+        "country": "RS",
+        "code": "RSD",
+        "symbol": "din.",
+        "name": "Serbian Dinar",
+        "dec": 0,
+        "lat": 44,
+        "lon": 21
+    },
+    {
+        "country": "SG",
+        "code": "SGD",
+        "symbol": "S$",
+        "name": "Singapore Dollar",
+        "dec": 2,
+        "lat": 1.3667,
+        "lon": 103.8
+    },
+    {
+        "country": "SK",
+        "code": "EUR",
+        "symbol": "€",
+        "name": "Euro",
+        "dec": 2,
+        "lat": 48.6667,
+        "lon": 19.5
+    },
+    {
+        "country": "SI",
+        "code": "EUR",
+        "symbol": "€",
+        "name": "Euro",
+        "dec": 2,
+        "lat": 46,
+        "lon": 15
+    },
+    {
+        "country": "SO",
+        "code": "SOS",
+        "symbol": "Ssh",
+        "name": "Somali Shilling",
+        "dec": 0,
+        "lat": 10,
+        "lon": 49
+    },
+    {
+        "country": "ZA",
+        "code": "ZAR",
+        "symbol": "R",
+        "name": "South African Rand",
+        "dec": 2,
+        "lat": -29,
+        "lon": 24
+    },
+    {
+        "country": "GS",
+        "code": "GBP",
+        "symbol": "£",
+        "name": "British Pound Sterling",
+        "dec": 2,
+        "lat": -54.5,
+        "lon": -37
+    },
+    {
+        "country": "ES",
+        "code": "EUR",
+        "symbol": "€",
+        "name": "Euro",
+        "dec": 2,
+        "lat": 40,
+        "lon": -4
+    },
+    {
+        "country": "LK",
+        "code": "LKR",
+        "symbol": "SLRs",
+        "name": "Sri Lankan Rupee",
+        "dec": 2,
+        "lat": 7,
+        "lon": 81
+    },
+    {
+        "country": "SD",
+        "code": "SDG",
+        "symbol": "SDG",
+        "name": "Sudanese Pound",
+        "dec": 2,
+        "lat": 15,
+        "lon": 30
+    },
+    {
+        "country": "SJ",
+        "code": "NOK",
+        "symbol": "Nkr",
+        "name": "Norwegian Krone",
+        "dec": 2,
+        "lat": 78,
+        "lon": 20
+    },
+    {
+        "country": "SE",
+        "code": "SEK",
+        "symbol": "Skr",
+        "name": "Swedish Krona",
+        "dec": 2,
+        "lat": 62,
+        "lon": 15
+    },
+    {
+        "country": "CH",
+        "code": "CHF",
+        "symbol": "CHF",
+        "name": "Swiss Franc",
+        "dec": 2,
+        "lat": 47,
+        "lon": 8
+    },
+    {
+        "country": "SY",
+        "code": "SYP",
+        "symbol": "SY£",
+        "name": "Syrian Pound",
+        "dec": 0,
+        "lat": 35,
+        "lon": 38
+    },
+    {
+        "country": "TW",
+        "code": "TWD",
+        "symbol": "NT$",
+        "name": "New Taiwan Dollar",
+        "dec": 2,
+        "lat": 23.5,
+        "lon": 121
+    },
+    {
+        "country": "TZ",
+        "code": "TZS",
+        "symbol": "TSh",
+        "name": "Tanzanian Shilling",
+        "dec": 0,
+        "lat": -6,
+        "lon": 35
+    },
+    {
+        "country": "TH",
+        "code": "THB",
+        "symbol": "฿",
+        "name": "Thai Baht",
+        "dec": 2,
+        "lat": 15,
+        "lon": 100
+    },
+    {
+        "country": "TL",
+        "code": "USD",
+        "symbol": "$",
+        "name": "US Dollar",
+        "dec": 2,
+        "lat": -8.55,
+        "lon": 125.5167
+    },
+    {
+        "country": "TG",
+        "code": "XOF",
+        "symbol": "CFA",
+        "name": "CFA Franc BCEAO",
+        "dec": 0,
+        "lat": 8,
+        "lon": 1.1667
+    },
+    {
+        "country": "TK",
+        "code": "NZD",
+        "symbol": "NZ$",
+        "name": "New Zealand Dollar",
+        "dec": 2,
+        "lat": -9,
+        "lon": -172
+    },
+    {
+        "country": "TO",
+        "code": "TOP",
+        "symbol": "T$",
+        "name": "Tongan Paʻanga",
+        "dec": 2,
+        "lat": -20,
+        "lon": -175
+    },
+    {
+        "country": "TT",
+        "code": "TTD",
+        "symbol": "TT$",
+        "name": "Trinidad and Tobago Dollar",
+        "dec": 2,
+        "lat": 11,
+        "lon": -61
+    },
+    {
+        "country": "TN",
+        "code": "TND",
+        "symbol": "DT",
+        "name": "Tunisian Dinar",
+        "dec": 3,
+        "lat": 34,
+        "lon": 9
+    },
+    {
+        "country": "TR",
+        "code": "TRY",
+        "symbol": "TL",
+        "name": "Turkish Lira",
+        "dec": 2,
+        "lat": 39,
+        "lon": 35
+    },
+    {
+        "country": "TC",
+        "code": "USD",
+        "symbol": "$",
+        "name": "US Dollar",
+        "dec": 2,
+        "lat": 21.75,
+        "lon": -71.5833
+    },
+    {
+        "country": "TV",
+        "code": "AUD",
+        "symbol": "AU$",
+        "name": "Australian Dollar",
+        "dec": 2,
+        "lat": -8,
+        "lon": 178
+    },
+    {
+        "country": "UG",
+        "code": "UGX",
+        "symbol": "USh",
+        "name": "Ugandan Shilling",
+        "dec": 0,
+        "lat": 1,
+        "lon": 32
+    },
+    {
+        "country": "UA",
+        "code": "UAH",
+        "symbol": "₴",
+        "name": "Ukrainian Hryvnia",
+        "dec": 2,
+        "lat": 49,
+        "lon": 32
+    },
+    {
+        "country": "AE",
+        "code": "AED",
+        "symbol": "AED",
+        "name": "United Arab Emirates Dirham",
+        "dec": 2,
+        "lat": 24,
+        "lon": 54
+    },
+    {
+        "country": "GB",
+        "code": "GBP",
+        "symbol": "£",
+        "name": "British Pound Sterling",
+        "dec": 2,
+        "lat": 54,
+        "lon": -2
+    },
+    {
+        "country": "US",
+        "code": "USD",
+        "symbol": "$",
+        "name": "US Dollar",
+        "dec": 2,
+        "lat": 38,
+        "lon": -97
+    },
+    {
+        "country": "UM",
+        "code": "USD",
+        "symbol": "$",
+        "name": "US Dollar",
+        "dec": 2,
+        "lat": 19.2833,
+        "lon": 166.6
+    },
+    {
+        "country": "UY",
+        "code": "UYU",
+        "symbol": "$U",
+        "name": "Uruguayan Peso",
+        "dec": 2,
+        "lat": -33,
+        "lon": -56
+    },
+    {
+        "country": "UZ",
+        "code": "UZS",
+        "symbol": "UZS",
+        "name": "Uzbekistan Som",
+        "dec": 0,
+        "lat": 41,
+        "lon": 64
+    },
+    {
+        "country": "VE",
+        "code": "VEF",
+        "symbol": "Bs.F.",
+        "name": "Venezuelan Bolívar",
+        "dec": 2,
+        "lat": 8,
+        "lon": -66
+    },
+    {
+        "country": "VN",
+        "code": "VND",
+        "symbol": "₫",
+        "name": "Vietnamese Dong",
+        "dec": 0,
+        "lat": 16,
+        "lon": 106
+    },
+    {
+        "country": "VG",
+        "code": "USD",
+        "symbol": "$",
+        "name": "US Dollar",
+        "dec": 2,
+        "lat": 18.5,
+        "lon": -64.5
+    },
+    {
+        "country": "VI",
+        "code": "USD",
+        "symbol": "$",
+        "name": "US Dollar",
+        "dec": 2,
+        "lat": 18.3333,
+        "lon": -64.8333
+    },
+    {
+        "country": "EH",
+        "code": "MAD",
+        "symbol": "MAD",
+        "name": "Moroccan Dirham",
+        "dec": 2,
+        "lat": 24.5,
+        "lon": -13
+    },
+    {
+        "country": "YE",
+        "code": "YER",
+        "symbol": "YR",
+        "name": "Yemeni Rial",
+        "dec": 0,
+        "lat": 15,
+        "lon": 48
+    },
+    {
+        "country": "ZM",
+        "code": "ZMK",
+        "symbol": "ZK",
+        "name": "Zambian Kwacha",
+        "dec": 0,
+        "lat": -15,
+        "lon": 30
+    },
+    {
+        "country": "AF",
+        "code": "AFN",
+        "symbol": "Af",
+        "name": "Afghan Afghani",
+        "dec": 0,
+        "lat": 33,
+        "lon": 65
+    }
+]

@@ -1,0 +1,42 @@
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+footer > p {
+    font: 0.8rem sans-serif;
+    color: rgba(255,255,255,.5); 
+    text-shadow: 0 1px rgba(1, 1, 1, 0.3);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.header {
+  font: 3rem sans-serif;
+  text-align: center;
+  margin: 1em;
+  margin-bottom: 0em;
+}
+
+nav {
+  font: 1rem sans-serif;
+  text-align: center;
+  margin: 1em;
+  margin-bottom: 1em;
+}
+
+@media only screen and (min-width: 768px) {
+    .title {
+        font: 4rem sans-serif;
+    }
+}

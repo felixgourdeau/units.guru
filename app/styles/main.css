@@ -1,0 +1,81 @@
+html {
+  background: rgb(2,0,36);
+  background: linear-gradient(36deg, rgba(2,0,36,1) 0%, rgba(120,120,120,1) 35%, rgba(0,212,255,1) 100%);
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+}
+
+.cell {
+  display: flex;
+  flex-direction: row;
+}
+
+.cell > :first-child { margin-right: 10px; }
+
+select {
+  width: 50%;
+}
+
+input[type=number], select {
+  border-radius: 0em;
+  border-color: black;
+  border-width: 1px;
+  border-style: solid;
+  text-align: center;
+  box-sizing: border-box;
+  background-color: #ececec;
+  padding: 0.5em;
+}
+
+input[type=number] {
+  font: 1.3rem sans-serif;
+  width: 100%;
+  -moz-appearance: textfield;
+  margin-bottom: 10px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .row {
+    flex-direction: row;
+  }
+
+  .cell > :first-child { margin-bottom: 10px; }
+
+  input[type=number] {
+    font: 1.3rem sans-serif;
+    width: 100px;
+    -moz-appearance: textfield;
+    margin-right: 10px;
+    margin-bottom: 0px;
+  }
+
+  select {
+    width: 100%;
+  }
+
+  .cell {
+    display: flex;
+    flex-direction: column;
+    width: 12em;
+  }
+}
