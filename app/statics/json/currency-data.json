@@ -1635,7 +1635,8 @@
         "name": "US Dollar",
         "dec": 2,
         "lat": 38,
-        "lon": -97
+        "lon": -97,
+        "unit": "GAL"
     },
     {
         "country": "UM",

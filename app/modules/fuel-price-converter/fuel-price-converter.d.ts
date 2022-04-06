@@ -11,4 +11,5 @@ export interface Currency {
   symbol: string;
   name: string;
   dec: number;
+  unit: string;
 }

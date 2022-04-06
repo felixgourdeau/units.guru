@@ -17,7 +17,7 @@ export const getDestinationFuelPrice = ({
 }) => {
   if (sourcePrice === "") return;
 
-  const sourceFuelPrice = parseInt(sourcePrice || "-1", 10);
+  const sourceFuelPrice = parseFloat(sourcePrice || "-1");
 
   if (!sourceCurrency || !destinationCurrency || !sourceFuelPrice) return;
 
@@ -44,28 +44,4 @@ export const getDestinationFuelPrice = ({
     destinationVolumeAmount /
     sourceRate
   );
-};
-
-export const formatPrice = (value: string, requiredDecimal: number) => {
-  const divider = requiredDecimal > 0 ? Math.pow(10, requiredDecimal) : 1;
-  const roundedValue = `${Math.round(parseFloat(value) * divider) / divider}`;
-
-  if (requiredDecimal === 0) return `${roundedValue}`;
-
-  const isInteger = !roundedValue.includes(".");
-
-  const decimals = (roundedValue.split(/\./)?.[1] ?? "").length;
-  const missingDecimal = requiredDecimal - decimals;
-
-  console.log({
-    divider,
-    isInteger,
-    value,
-    roundedValue,
-    decimals,
-    missingDecimal,
-    requiredDecimal,
-  });
-
-  return `${roundedValue}${isInteger ? "." : ""}${"0".repeat(missingDecimal)}`;
 };

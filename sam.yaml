@@ -1,6 +1,6 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
-Description: Exported by architect/package@8.1.0 on 2022-04-05T21:11:52.773Z
+Description: Exported by architect/package@8.1.0 on 2022-04-06T18:47:13.418Z
 Resources:
   Role:
     Type: AWS::IAM::Role
@@ -130,7 +130,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       Handler: index.handler
-      CodeUri: s3://unitsguru-cfn-deployments-20a24/97fecc0756dc897a8d73778b31a4185a
+      CodeUri: s3://unitsguru-cfn-deployments-20a24/a6ed0449f3531bc1a20bd5d02eb45380
       Runtime: nodejs14.x
       Architectures:
       - arm64

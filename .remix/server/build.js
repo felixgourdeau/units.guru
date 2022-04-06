@@ -353,35 +353,13 @@ function handleRequest(request, responseStatusCode, responseHeaders, remixContex
 // route:/Users/felixgourdeau/repos/unitsguru/app/root.tsx
 var root_exports = {};
 __export(root_exports, {
+  CatchBoundary: () => CatchBoundary,
   default: () => App,
+  links: () => links4,
   meta: () => meta
 });
 init_react();
-var import_remix2 = __toESM(require_remix());
-var meta = () => ({
-  charset: "utf-8",
-  title: "units.guru",
-  viewport: "width=device-width,initial-scale=1"
-});
-function App() {
-  return /* @__PURE__ */ React.createElement("html", {
-    lang: "en"
-  }, /* @__PURE__ */ React.createElement("head", null, /* @__PURE__ */ React.createElement(import_remix2.Meta, null), /* @__PURE__ */ React.createElement(import_remix2.Links, null)), /* @__PURE__ */ React.createElement("body", null, /* @__PURE__ */ React.createElement(import_remix2.Outlet, null), /* @__PURE__ */ React.createElement(import_remix2.ScrollRestoration, null), /* @__PURE__ */ React.createElement(import_remix2.Scripts, null), /* @__PURE__ */ React.createElement(import_remix2.LiveReload, null)));
-}
-
-// route:/Users/felixgourdeau/repos/unitsguru/app/routes/index.tsx
-var routes_exports = {};
-__export(routes_exports, {
-  default: () => routes_default,
-  links: () => links4,
-  loader: () => loader
-});
-init_react();
-var import_react3 = __toESM(require("react"));
 var import_remix4 = __toESM(require_remix());
-
-// app/styles/main.css
-var main_default = "/_static/.remix/_assets/main-BU23PXSU.css";
 
 // app/modules/github-corner/github-corner.component.tsx
 init_react();
@@ -415,6 +393,7 @@ var GithubCorner = ({ url }) => /* @__PURE__ */ React.createElement("a", {
 
 // app/modules/layout/layout.component.tsx
 init_react();
+var import_remix2 = __toESM(require_remix());
 
 // app/modules/layout/layout.styles.css
 var layout_styles_default = "/_static/.remix/_assets/layout.styles-OW2RVRWV.css";
@@ -425,19 +404,22 @@ var Layout = ({ children }) => {
   return /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement("div", {
     className: "header"
   }, "units \u{1F913} guru"), /* @__PURE__ */ React.createElement(GithubCorner, {
-    url: "https://felixgourdeau.ca"
-  }), /* @__PURE__ */ React.createElement("nav", null, /* @__PURE__ */ React.createElement("a", {
-    href: "/gas/"
-  }, "Gas price"), " |", /* @__PURE__ */ React.createElement("a", {
-    href: "/currency/"
-  }, "Currency"), " |", /* @__PURE__ */ React.createElement("a", {
-    href: "/about/"
+    url: "https://github.com/felixgourdeau/unitsguru"
+  }), /* @__PURE__ */ React.createElement("nav", null, /* @__PURE__ */ React.createElement(import_remix2.Link, {
+    prefetch: "render",
+    to: "/gas"
+  }, "Gas price"), " ", "|", " ", /* @__PURE__ */ React.createElement(import_remix2.Link, {
+    prefetch: "render",
+    to: "/currency"
+  }, "Currency"), " ", "|", " ", /* @__PURE__ */ React.createElement(import_remix2.Link, {
+    prefetch: "render",
+    to: "/about"
   }, "About")), /* @__PURE__ */ React.createElement("main", null, children), /* @__PURE__ */ React.createElement("footer", null, /* @__PURE__ */ React.createElement("p", null, "\xA9 2022 F\xE9lix Gourdeau Inc. All Rights Reserved.")));
 };
 
 // app/modules/fuel-price-converter/fuel-price-converter.component.tsx
 init_react();
-var import_react2 = __toESM(require("react"));
+var import_react4 = __toESM(require("react"));
 
 // app/modules/fuel-price-converter/fuel-price-converter.selector.ts
 init_react();
@@ -461,7 +443,7 @@ var getDestinationFuelPrice = ({
   var _a, _b;
   if (sourcePrice === "")
     return;
-  const sourceFuelPrice = parseInt(sourcePrice || "-1", 10);
+  const sourceFuelPrice = parseFloat(sourcePrice || "-1");
   if (!sourceCurrency || !destinationCurrency || !sourceFuelPrice)
     return;
   const sourceRate = rates[sourceCurrency];
@@ -472,6 +454,18 @@ var getDestinationFuelPrice = ({
     return;
   return sourceFuelPrice * destinationRate * sourceVolumeAmount / destinationVolumeAmount / sourceRate;
 };
+
+// app/modules/fuel-price-form/fuel-price-form.component.tsx
+init_react();
+var import_react3 = __toESM(require("react"));
+var import_remix3 = __toESM(require_remix());
+
+// app/modules/currency-input/currency-input.component.tsx
+init_react();
+var import_react = __toESM(require("react"));
+
+// app/modules/currency-input/currency-input.selector.ts
+init_react();
 var formatPrice = (value, requiredDecimal) => {
   var _a;
   const divider = requiredDecimal > 0 ? Math.pow(10, requiredDecimal) : 1;
@@ -493,47 +487,72 @@ var formatPrice = (value, requiredDecimal) => {
   return `${roundedValue}${isInteger ? "." : ""}${"0".repeat(missingDecimal)}`;
 };
 
-// app/modules/fuel-price-form/fuel-price-form.component.tsx
-init_react();
-var import_react = __toESM(require("react"));
-var import_remix3 = __toESM(require_remix());
-var formatCurrencyItem = (name, symbol) => `${name == null ? void 0 : name.replace(/(.{16})..+/, "$1\u2026")} (${symbol})`;
-var FuelPriceForm = ({ currencies, formFieldRefs, onChangeCallback, favoriteCurrencies }) => {
-  const { priceRef, currencyRef, volumeRef } = formFieldRefs;
-  return /* @__PURE__ */ import_react.default.createElement(import_remix3.Form, {
-    onChange: onChangeCallback,
-    className: "row"
-  }, /* @__PURE__ */ import_react.default.createElement("input", {
-    className: "numberInput",
+// app/modules/currency-input/currency-input.component.tsx
+var CurrencyInput = ({ inputRef, decimals, disabled }) => {
+  return /* @__PURE__ */ import_react.default.createElement("input", {
+    disabled,
     type: "number",
     id: "price",
-    width: 70,
-    ref: priceRef,
+    ref: inputRef,
     onBlur: (event) => {
-      const currentDecimal = currencies.find((currency) => {
-        var _a;
-        return currency.code === ((_a = currencyRef.current) == null ? void 0 : _a.value);
-      });
-      if (priceRef.current)
-        priceRef.current.value = formatPrice(event.target.value, (currentDecimal == null ? void 0 : currentDecimal.dec) ?? 2);
+      console.log("ONBLUR", event.target.value, formatPrice(event.target.value, decimals), inputRef);
+      if (inputRef.current)
+        inputRef.current.value = formatPrice(event.target.value, decimals);
     }
-  }), /* @__PURE__ */ import_react.default.createElement("div", {
-    className: "cell"
-  }, /* @__PURE__ */ import_react.default.createElement("select", {
+  });
+};
+
+// app/modules/currency-select/currency-select.component.tsx
+init_react();
+var import_react2 = __toESM(require("react"));
+var formatCurrencyItem = (name, symbol) => `${name == null ? void 0 : name.replace(/(.{16})..+/, "$1\u2026")} (${symbol})`;
+var CurrencySelect = ({ currencies, inputRef }) => {
+  const DEFAULT_FAVORITE_CODES = ["USD", "CAD", "EUR"];
+  const favoriteCurrencies = DEFAULT_FAVORITE_CODES.map((defaultCurrency) => {
+    return currencies.find((currency) => currency.code === defaultCurrency);
+  }).filter(Boolean);
+  console.log({ favoriteCurrencies });
+  const renderCurrencyItem = (currency) => {
+    if (!currency)
+      return null;
+    const { code, name, symbol } = currency;
+    return /* @__PURE__ */ import_react2.default.createElement("option", {
+      key: code,
+      value: code
+    }, formatCurrencyItem(name, symbol));
+  };
+  return /* @__PURE__ */ import_react2.default.createElement("select", {
     id: "currency",
-    ref: currencyRef
-  }, favoriteCurrencies.map(({ code, name, symbol }) => /* @__PURE__ */ import_react.default.createElement("option", {
-    key: code,
-    value: code
-  }, formatCurrencyItem(name, symbol))), /* @__PURE__ */ import_react.default.createElement("option", {
+    ref: inputRef
+  }, favoriteCurrencies.map(renderCurrencyItem), /* @__PURE__ */ import_react2.default.createElement("option", {
     disabled: true
-  }, "\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500"), currencies.map(({ code, name, symbol }) => /* @__PURE__ */ import_react.default.createElement("option", {
-    key: code,
-    value: code
-  }, formatCurrencyItem(name, symbol)))), /* @__PURE__ */ import_react.default.createElement("select", {
+  }, "\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500"), currencies.map(renderCurrencyItem));
+};
+
+// app/modules/fuel-price-form/fuel-price-form.component.tsx
+var FuelPriceForm = ({ currencies, formFieldRefs, onChangeCallback, type }) => {
+  const { priceRef, currencyRef, volumeRef } = formFieldRefs;
+  const currency = currencies.find((currency2) => {
+    var _a;
+    return currency2.code === ((_a = currencyRef.current) == null ? void 0 : _a.value);
+  });
+  const decimals = (currency == null ? void 0 : currency.dec) ?? 2;
+  return /* @__PURE__ */ import_react3.default.createElement(import_remix3.Form, {
+    onChange: onChangeCallback,
+    className: "row"
+  }, /* @__PURE__ */ import_react3.default.createElement(CurrencyInput, {
+    inputRef: priceRef,
+    decimals,
+    disabled: type === "destination"
+  }), /* @__PURE__ */ import_react3.default.createElement("div", {
+    className: "cell"
+  }, /* @__PURE__ */ import_react3.default.createElement(CurrencySelect, {
+    inputRef: currencyRef,
+    currencies
+  }), /* @__PURE__ */ import_react3.default.createElement("select", {
     id: "volume",
     ref: volumeRef
-  }, VOLUME_UNITS.map(({ abbreviation, name }) => /* @__PURE__ */ import_react.default.createElement("option", {
+  }, VOLUME_UNITS.map(({ abbreviation, name }) => /* @__PURE__ */ import_react3.default.createElement("option", {
     key: abbreviation,
     value: abbreviation
   }, `${name}`)))));
@@ -544,97 +563,119 @@ var fuel_price_converter_styles_default = "/_static/.remix/_assets/fuel-price-co
 
 // app/modules/fuel-price-converter/fuel-price-converter.component.tsx
 var links3 = () => [{ rel: "stylesheet", href: fuel_price_converter_styles_default }];
-var getItem = (key) => {
-  try {
-    return window.localStorage.getItem(key);
-  } catch (error) {
-    console.log(error);
-    return null;
-  }
-};
 var FuelPriceConverter = ({ currencies, rates }) => {
   const inputFieldRefs = {
-    priceRef: import_react2.default.useRef(null),
-    currencyRef: import_react2.default.useRef(null),
-    volumeRef: import_react2.default.useRef(null)
+    priceRef: import_react4.default.useRef(null),
+    currencyRef: import_react4.default.useRef(null),
+    volumeRef: import_react4.default.useRef(null)
   };
   const outputFieldRefs = {
-    priceRef: import_react2.default.useRef(null),
-    currencyRef: import_react2.default.useRef(null),
-    volumeRef: import_react2.default.useRef(null)
+    priceRef: import_react4.default.useRef(null),
+    currencyRef: import_react4.default.useRef(null),
+    volumeRef: import_react4.default.useRef(null)
   };
-  const onFormChange = (form) => () => {
-    var _a, _b, _c, _d, _e, _f, _g, _h, _i, _j;
-    if (form === "input") {
-      const outputPrice = getDestinationFuelPrice({
-        sourcePrice: (_a = inputFieldRefs.priceRef.current) == null ? void 0 : _a.value,
-        sourceCurrency: (_b = inputFieldRefs.currencyRef.current) == null ? void 0 : _b.value,
-        destinationCurrency: (_c = outputFieldRefs.currencyRef.current) == null ? void 0 : _c.value,
-        sourceVolume: (_d = inputFieldRefs.volumeRef.current) == null ? void 0 : _d.value,
-        destinationVolume: (_e = outputFieldRefs.volumeRef.current) == null ? void 0 : _e.value,
-        rates
-      });
-      const currentDecimal = currencies.find((currency) => {
-        var _a2;
-        return currency.code === ((_a2 = outputFieldRefs.currencyRef.current) == null ? void 0 : _a2.value);
-      });
-      if (outputFieldRefs.priceRef.current)
-        outputFieldRefs.priceRef.current.value = formatPrice(outputPrice ? `${outputPrice}` : "", (currentDecimal == null ? void 0 : currentDecimal.dec) ?? 2);
-    } else {
-      const outputPrice = getDestinationFuelPrice({
-        sourcePrice: (_f = outputFieldRefs.priceRef.current) == null ? void 0 : _f.value,
-        sourceCurrency: (_g = outputFieldRefs.currencyRef.current) == null ? void 0 : _g.value,
-        destinationCurrency: (_h = inputFieldRefs.currencyRef.current) == null ? void 0 : _h.value,
-        sourceVolume: (_i = outputFieldRefs.volumeRef.current) == null ? void 0 : _i.value,
-        destinationVolume: (_j = inputFieldRefs.volumeRef.current) == null ? void 0 : _j.value,
-        rates
-      });
-      const currentDecimal = currencies.find((currency) => {
-        var _a2;
-        return currency.code === ((_a2 = inputFieldRefs.currencyRef.current) == null ? void 0 : _a2.value);
-      });
-      if (inputFieldRefs.priceRef.current)
-        inputFieldRefs.priceRef.current.value = formatPrice(outputPrice ? `${outputPrice}` : "", (currentDecimal == null ? void 0 : currentDecimal.dec) ?? 2);
-    }
+  const onFormChange = () => {
+    var _a, _b, _c, _d, _e;
+    const outputPrice = getDestinationFuelPrice({
+      sourcePrice: (_a = inputFieldRefs.priceRef.current) == null ? void 0 : _a.value,
+      sourceCurrency: (_b = inputFieldRefs.currencyRef.current) == null ? void 0 : _b.value,
+      destinationCurrency: (_c = outputFieldRefs.currencyRef.current) == null ? void 0 : _c.value,
+      sourceVolume: (_d = inputFieldRefs.volumeRef.current) == null ? void 0 : _d.value,
+      destinationVolume: (_e = outputFieldRefs.volumeRef.current) == null ? void 0 : _e.value,
+      rates
+    });
+    const currentDecimal = currencies.find((currency) => {
+      var _a2;
+      return currency.code === ((_a2 = outputFieldRefs.currencyRef.current) == null ? void 0 : _a2.value);
+    });
+    const result = formatPrice(outputPrice ? `${outputPrice}` : "", (currentDecimal == null ? void 0 : currentDecimal.dec) ?? 2);
+    if (outputFieldRefs.priceRef.current)
+      outputFieldRefs.priceRef.current.value = result;
   };
-  const DEFAULT_FAVORITE_CODES = ["USD", "CAD", "EUR"];
-  const [favoriteCodes, setFavoriteCodes] = import_react2.default.useState([]);
-  const getSavedFavoriteCode = () => {
-    try {
-      return JSON.parse(getItem("favorite_codes") || "");
-    } catch (error) {
-      return null;
-    }
-  };
-  import_react2.default.useEffect(() => {
-    const savedFavoriteCodes = getSavedFavoriteCode();
-    console.log({ savedFavoriteCodes });
-    setFavoriteCodes(savedFavoriteCodes || DEFAULT_FAVORITE_CODES);
-  }, []);
-  const favoriteCurrencies = favoriteCodes.map((defaultCurrency) => {
-    return currencies.find((currency) => currency.code === defaultCurrency);
-  }).filter(Boolean);
-  console.log({ favoriteCurrencies });
-  import_react2.default.useEffect(() => {
+  import_react4.default.useEffect(() => {
     inputFieldRefs.currencyRef.current.value = "CAD";
     outputFieldRefs.currencyRef.current.value = "USD";
-  }, []);
-  return /* @__PURE__ */ import_react2.default.createElement("div", {
+    inputFieldRefs.volumeRef.current.value = "L";
+    outputFieldRefs.volumeRef.current.value = "GAL";
+    inputFieldRefs.priceRef.current.value = "1";
+    onFormChange();
+  });
+  return /* @__PURE__ */ import_react4.default.createElement("div", {
     className: "formContainer"
-  }, /* @__PURE__ */ import_react2.default.createElement(FuelPriceForm, {
+  }, /* @__PURE__ */ import_react4.default.createElement(FuelPriceForm, {
     currencies,
-    favoriteCurrencies,
     formFieldRefs: inputFieldRefs,
-    onChangeCallback: onFormChange("input")
-  }), /* @__PURE__ */ import_react2.default.createElement("div", {
+    onChangeCallback: onFormChange,
+    type: "source"
+  }), /* @__PURE__ */ import_react4.default.createElement("div", {
     className: "arrow"
-  }, "\u2194"), /* @__PURE__ */ import_react2.default.createElement(FuelPriceForm, {
+  }, "\u2194"), /* @__PURE__ */ import_react4.default.createElement(FuelPriceForm, {
     currencies,
-    favoriteCurrencies,
     formFieldRefs: outputFieldRefs,
-    onChangeCallback: onFormChange("output")
+    onChangeCallback: onFormChange,
+    type: "destination"
   }));
 };
+
+// app/styles/main.css
+var main_default = "/_static/.remix/_assets/main-5TTJ4LBJ.css";
+
+// route:/Users/felixgourdeau/repos/unitsguru/app/root.tsx
+var meta = () => ({
+  charset: "utf-8",
+  title: "units.guru",
+  viewport: "width=device-width,initial-scale=1",
+  description: "Unit converter tool"
+});
+var links4 = () => {
+  return [
+    ...links(),
+    ...links2(),
+    ...links3(),
+    { rel: "stylesheet", href: main_default },
+    { rel: "manifest", href: "app.webmanifest" }
+  ];
+};
+var Document = ({ children }) => {
+  return /* @__PURE__ */ React.createElement("html", {
+    lang: "en"
+  }, /* @__PURE__ */ React.createElement("head", null, /* @__PURE__ */ React.createElement(import_remix4.Meta, null), /* @__PURE__ */ React.createElement(import_remix4.Links, null)), /* @__PURE__ */ React.createElement("body", null, children, /* @__PURE__ */ React.createElement(import_remix4.Scripts, null), /* @__PURE__ */ React.createElement(import_remix4.LiveReload, null)));
+};
+function CatchBoundary() {
+  const caught = (0, import_remix4.useCatch)();
+  return /* @__PURE__ */ React.createElement(Document, null, /* @__PURE__ */ React.createElement(Layout, null, /* @__PURE__ */ React.createElement("div", {
+    className: "error-container"
+  }, /* @__PURE__ */ React.createElement("h1", null, caught.status, " ", caught.statusText))));
+}
+function App() {
+  return /* @__PURE__ */ React.createElement(Document, null, /* @__PURE__ */ React.createElement(Layout, null, /* @__PURE__ */ React.createElement(import_remix4.Outlet, null)));
+}
+
+// route:/Users/felixgourdeau/repos/unitsguru/app/routes/about/index.tsx
+var about_exports = {};
+__export(about_exports, {
+  default: () => about_default
+});
+init_react();
+var import_react5 = __toESM(require("react"));
+var import_remix5 = __toESM(require_remix());
+var about_default = () => {
+  return /* @__PURE__ */ import_react5.default.createElement(import_remix5.Link, {
+    prefetch: "render",
+    to: "https://www.feligourdeau.ca"
+  }, "felixgourdeau.ca");
+};
+
+// route:/Users/felixgourdeau/repos/unitsguru/app/routes/gas/index.tsx
+var gas_exports = {};
+__export(gas_exports, {
+  CatchBoundary: () => CatchBoundary2,
+  default: () => gas_default,
+  loader: () => loader
+});
+init_react();
+var import_react6 = __toESM(require("react"));
+var import_remix6 = __toESM(require_remix());
 
 // app/statics/json/currency-data.json
 var currency_data_default = [
@@ -2274,7 +2315,8 @@ var currency_data_default = [
     name: "US Dollar",
     dec: 2,
     lat: 38,
-    lon: -97
+    lon: -97,
+    unit: "GAL"
   },
   {
     country: "UM",
@@ -2377,38 +2419,394 @@ var currency_data_default = [
   }
 ];
 
-// route:/Users/felixgourdeau/repos/unitsguru/app/routes/index.tsx
-var links4 = () => {
-  return [
-    ...links(),
-    ...links2(),
-    ...links3(),
-    { rel: "stylesheet", href: main_default }
-  ];
+// app/statics/json/mocked-rates.json
+var AED = 3.671662;
+var AFN = 88.379525;
+var ALL = 110.574067;
+var AMD = 488.393575;
+var ANG = 1.801134;
+var AOA = 449.61965;
+var ARS = 110.762598;
+var AUD = 1.330733;
+var AWG = 1.799911;
+var AZN = 1.69973;
+var BAM = 1.769287;
+var BBD = 2.00025;
+var BDT = 86.138036;
+var BGN = 1.765024;
+var BHD = 0.377258;
+var BIF = 2033.772076;
+var BMD = 1.000308;
+var BND = 1.358971;
+var BOB = 6.868879;
+var BRL = 4.755764;
+var BSD = 1.000246;
+var BTC = 21e-6;
+var BTN = 75.920317;
+var BWP = 11.470079;
+var BYN = 3.254048;
+var BZD = 2.01408;
+var CAD = 1.249728;
+var CDF = 2003.618822;
+var CHF = 0.931096;
+var CLF = 0.028223;
+var CLP = 780.606848;
+var CNH = 6.372363;
+var CNY = 6.3614;
+var COP = 3769.297613;
+var CRC = 654.720931;
+var CUC = 1.000366;
+var CUP = 25.737845;
+var CVE = 99.904177;
+var CZK = 22.069338;
+var DJF = 177.867434;
+var DKK = 6.705956;
+var DOP = 54.886764;
+var DZD = 142.861038;
+var EGP = 18.311398;
+var ERN = 14.993123;
+var ETB = 51.165943;
+var EUR = 0.902313;
+var FJD = 2.095303;
+var FKP = 0.764226;
+var GBP = 0.764349;
+var GEL = 3.138988;
+var GGP = 0.764041;
+var GHS = 7.564359;
+var GIP = 0.764254;
+var GMD = 53.725263;
+var GNF = 8913.083283;
+var GTQ = 7.676512;
+var GYD = 209.004457;
+var HKD = 7.824627;
+var HNL = 24.384252;
+var HRK = 6.834424;
+var HTG = 106.392556;
+var HUF = 331.401635;
+var IDR = 14331.374883;
+var ILS = 3.191768;
+var IMP = 0.764446;
+var INR = 75.632311;
+var IQD = 1458.534883;
+var IRR = 42230.181924;
+var ISK = 127.640566;
+var JEP = 0.764358;
+var JMD = 153.434374;
+var JOD = 0.709134;
+var JPY = 122.828756;
+var KES = 114.809143;
+var KGS = 98.544917;
+var KHR = 4046.750737;
+var KMF = 444.167522;
+var KPW = 899.577907;
+var KRW = 1209.184915;
+var KWD = 0.303973;
+var KYD = 0.83234;
+var KZT = 467.177975;
+var LAK = 11710.885935;
+var LBP = 1515.917329;
+var LKR = 295.700982;
+var LRD = 152.928928;
+var LSL = 14.608665;
+var LYD = 4.672296;
+var MAD = 9.665781;
+var MDL = 18.281549;
+var MGA = 4019.375909;
+var MKD = 56.122736;
+var MMK = 1776.349349;
+var MNT = 2896.392961;
+var MOP = 8.055677;
+var MRU = 36.383594;
+var MUR = 44.630111;
+var MVR = 15.443137;
+var MWK = 816.524036;
+var MXN = 19.963867;
+var MYR = 4.211897;
+var MZN = 63.81264;
+var NAD = 14.598163;
+var NGN = 415.565261;
+var NIO = 35.714183;
+var NOK = 8.678041;
+var NPR = 121.472069;
+var NZD = 1.440885;
+var OMR = 0.385036;
+var PAB = 1.000449;
+var PEN = 3.727625;
+var PGK = 3.510814;
+var PHP = 51.956224;
+var PKR = 182.354899;
+var PLN = 4.199811;
+var PYG = 6966.939043;
+var QAR = 3.639869;
+var RON = 4.459612;
+var RSD = 106.130804;
+var RUB = 87.459866;
+var RWF = 1015.860218;
+var SAR = 3.751674;
+var SBD = 8.018949;
+var SCR = 14.410243;
+var SDG = 447.290092;
+var SEK = 9.322841;
+var SGD = 1.356655;
+var SHP = 0.76373;
+var SLL = 11749.986241;
+var SOS = 580.217675;
+var SRD = 20.670109;
+var SSP = 130.199743;
+var STD = 21433.182111;
+var STN = 22.340033;
+var SVC = 8.741486;
+var SYP = 2510.822091;
+var SZL = 14.613023;
+var THB = 33.454731;
+var TJS = 12.917472;
+var TMT = 3.498897;
+var TND = 2.93666;
+var TOP = 2.254245;
+var TRY = 14.580932;
+var TTD = 6.788002;
+var TWD = 28.631327;
+var TZS = 2319.912306;
+var UAH = 29.370953;
+var UGX = 3591.451859;
+var USD = 1;
+var UYU = 41.449945;
+var UZS = 11446.628447;
+var VES = 4.363177;
+var VND = 22856.870513;
+var VUV = 113.095437;
+var WST = 2.60272;
+var XAF = 591.34021;
+var XAG = 0.040734;
+var XAU = 1542e-6;
+var XCD = 2.701712;
+var XDR = 0.719095;
+var XOF = 591.340756;
+var XPD = 1374e-6;
+var XPF = 107.577499;
+var XPT = 1633e-6;
+var YER = 250.133287;
+var ZAR = 14.52282;
+var ZMW = 17.982394;
+var ZWL = 321.849318;
+var mocked_rates_default = {
+  AED,
+  AFN,
+  ALL,
+  AMD,
+  ANG,
+  AOA,
+  ARS,
+  AUD,
+  AWG,
+  AZN,
+  BAM,
+  BBD,
+  BDT,
+  BGN,
+  BHD,
+  BIF,
+  BMD,
+  BND,
+  BOB,
+  BRL,
+  BSD,
+  BTC,
+  BTN,
+  BWP,
+  BYN,
+  BZD,
+  CAD,
+  CDF,
+  CHF,
+  CLF,
+  CLP,
+  CNH,
+  CNY,
+  COP,
+  CRC,
+  CUC,
+  CUP,
+  CVE,
+  CZK,
+  DJF,
+  DKK,
+  DOP,
+  DZD,
+  EGP,
+  ERN,
+  ETB,
+  EUR,
+  FJD,
+  FKP,
+  GBP,
+  GEL,
+  GGP,
+  GHS,
+  GIP,
+  GMD,
+  GNF,
+  GTQ,
+  GYD,
+  HKD,
+  HNL,
+  HRK,
+  HTG,
+  HUF,
+  IDR,
+  ILS,
+  IMP,
+  INR,
+  IQD,
+  IRR,
+  ISK,
+  JEP,
+  JMD,
+  JOD,
+  JPY,
+  KES,
+  KGS,
+  KHR,
+  KMF,
+  KPW,
+  KRW,
+  KWD,
+  KYD,
+  KZT,
+  LAK,
+  LBP,
+  LKR,
+  LRD,
+  LSL,
+  LYD,
+  MAD,
+  MDL,
+  MGA,
+  MKD,
+  MMK,
+  MNT,
+  MOP,
+  MRU,
+  MUR,
+  MVR,
+  MWK,
+  MXN,
+  MYR,
+  MZN,
+  NAD,
+  NGN,
+  NIO,
+  NOK,
+  NPR,
+  NZD,
+  OMR,
+  PAB,
+  PEN,
+  PGK,
+  PHP,
+  PKR,
+  PLN,
+  PYG,
+  QAR,
+  RON,
+  RSD,
+  RUB,
+  RWF,
+  SAR,
+  SBD,
+  SCR,
+  SDG,
+  SEK,
+  SGD,
+  SHP,
+  SLL,
+  SOS,
+  SRD,
+  SSP,
+  STD,
+  STN,
+  SVC,
+  SYP,
+  SZL,
+  THB,
+  TJS,
+  TMT,
+  TND,
+  TOP,
+  TRY,
+  TTD,
+  TWD,
+  TZS,
+  UAH,
+  UGX,
+  USD,
+  UYU,
+  UZS,
+  VES,
+  VND,
+  VUV,
+  WST,
+  XAF,
+  XAG,
+  XAU,
+  XCD,
+  XDR,
+  XOF,
+  XPD,
+  XPF,
+  XPT,
+  YER,
+  ZAR,
+  ZMW,
+  ZWL
 };
+
+// route:/Users/felixgourdeau/repos/unitsguru/app/routes/gas/index.tsx
 var loader = async () => {
-  const exchangeRatesResponse = await fetch("https://api.exchangerate.host/latest?base=USD");
-  const { rates } = await exchangeRatesResponse.json();
+  const rates = mocked_rates_default;
   const currencies = Object.keys(rates).map((currencyAbbreviation) => {
     const data = currency_data_default.find((entry2) => entry2.code === currencyAbbreviation);
     if (!data)
       return void 0;
-    const { code, symbol, name, dec } = data || {};
-    return { code, symbol, name, dec };
+    const { code, symbol, name, dec, unit } = data || {};
+    return { code, symbol, name, dec, unit: unit || "L" };
   }).filter(Boolean);
-  return (0, import_remix4.json)({ rates, currencies });
+  return (0, import_remix6.json)({ rates, currencies });
 };
-var routes_default = () => {
-  const { rates, currencies } = (0, import_remix4.useLoaderData)();
-  return /* @__PURE__ */ import_react3.default.createElement(Layout, null, /* @__PURE__ */ import_react3.default.createElement(FuelPriceConverter, {
+function CatchBoundary2() {
+  const caught = (0, import_remix6.useCatch)();
+  return /* @__PURE__ */ import_react6.default.createElement("div", {
+    className: "error-container"
+  }, /* @__PURE__ */ import_react6.default.createElement("h1", null, caught.status, " ", caught.statusText));
+}
+var gas_default = () => {
+  const { rates, currencies } = (0, import_remix6.useLoaderData)();
+  return /* @__PURE__ */ import_react6.default.createElement(FuelPriceConverter, {
     rates,
     currencies
-  }));
+  });
 };
+
+// route:/Users/felixgourdeau/repos/unitsguru/app/routes/index.tsx
+var routes_exports = {};
+__export(routes_exports, {
+  default: () => App2,
+  loader: () => loader2
+});
+init_react();
+var import_remix7 = __toESM(require_remix());
+var loader2 = async () => {
+  console.log("PROUTEEEE1");
+  return (0, import_remix7.json)({});
+};
+function App2() {
+  console.log("PROUTEEEE");
+  return /* @__PURE__ */ React.createElement(import_remix7.Outlet, null);
+}
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
 init_react();
-var assets_manifest_default = { "version": "a23362af", "entry": { "module": "/_static/.remix/entry.client-44FOU4IB.js", "imports": ["/_static/.remix/_shared/chunk-SBX3GA2H.js"] }, "routes": { "root": { "id": "root", "parentId": void 0, "path": "", "index": void 0, "caseSensitive": void 0, "module": "/_static/.remix/root-JZ23TRPW.js", "imports": void 0, "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/index": { "id": "routes/index", "parentId": "root", "path": void 0, "index": true, "caseSensitive": void 0, "module": "/_static/.remix/routes/index-EICGADGF.js", "imports": void 0, "hasAction": false, "hasLoader": true, "hasCatchBoundary": false, "hasErrorBoundary": false } }, "url": "/_static/.remix/manifest-A23362AF.js" };
+var assets_manifest_default = { "version": "ff8e73ca", "entry": { "module": "/_static/.remix/entry.client-F546FHO2.js", "imports": ["/_static/.remix/_shared/chunk-U3IK36DW.js"] }, "routes": { "root": { "id": "root", "parentId": void 0, "path": "", "index": void 0, "caseSensitive": void 0, "module": "/_static/.remix/root-WBNU3IJQ.js", "imports": ["/_static/.remix/_shared/chunk-SDGAZYSZ.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": true, "hasErrorBoundary": false }, "routes/about/index": { "id": "routes/about/index", "parentId": "root", "path": "about", "index": true, "caseSensitive": void 0, "module": "/_static/.remix/routes/about/index-E6XIC5RC.js", "imports": void 0, "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/gas/index": { "id": "routes/gas/index", "parentId": "root", "path": "gas", "index": true, "caseSensitive": void 0, "module": "/_static/.remix/routes/gas/index-3O7E2AGD.js", "imports": void 0, "hasAction": false, "hasLoader": true, "hasCatchBoundary": true, "hasErrorBoundary": false }, "routes/index": { "id": "routes/index", "parentId": "root", "path": void 0, "index": true, "caseSensitive": void 0, "module": "/_static/.remix/routes/index-CBHDH3D4.js", "imports": void 0, "hasAction": false, "hasLoader": true, "hasCatchBoundary": false, "hasErrorBoundary": false } }, "url": "/_static/.remix/manifest-FF8E73CA.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var entry = { module: entry_server_exports };
@@ -2420,6 +2818,22 @@ var routes = {
     index: void 0,
     caseSensitive: void 0,
     module: root_exports
+  },
+  "routes/about/index": {
+    id: "routes/about/index",
+    parentId: "root",
+    path: "about",
+    index: true,
+    caseSensitive: void 0,
+    module: about_exports
+  },
+  "routes/gas/index": {
+    id: "routes/gas/index",
+    parentId: "root",
+    path: "gas",
+    index: true,
+    caseSensitive: void 0,
+    module: gas_exports
   },
   "routes/index": {
     id: "routes/index",
