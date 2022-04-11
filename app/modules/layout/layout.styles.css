@@ -35,6 +35,17 @@ nav {
   margin-bottom: 1em;
 }
 
+nav > a {
+    font: 1rem sans-serif;
+    color: rgba(255,255,255,.7); 
+    text-shadow: 0 1px rgba(1, 1, 1, 0.3);
+    text-decoration: none;
+}
+
+.activeNav {
+    text-decoration: underline;
+}
+
 @media only screen and (min-width: 768px) {
     .title {
         font: 4rem sans-serif;

@@ -14,7 +14,7 @@ import {
   Layout,
   links as layoutStyles,
 } from "~/modules/layout/layout.component";
-import { links as fuelPriceConverterStyles } from "~/modules/fuel-price-converter/fuel-price-converter.component";
+
 import styles from "app/styles/main.css";
 
 export const meta: MetaFunction = () => ({
@@ -28,7 +28,6 @@ export const links: LinksFunction = () => {
   return [
     ...githubCornerStyles(),
     ...layoutStyles(),
-    ...fuelPriceConverterStyles(),
     { rel: "stylesheet", href: styles },
     { rel: "manifest", href: "app.webmanifest" },
   ];
@@ -50,16 +49,13 @@ const Document: React.FC = ({ children }) => {
   );
 };
 
-export function CatchBoundary() {
-  const caught = useCatch();
-
+export function ErrorBoundary({ error }: { error: Error }) {
   return (
     <Document>
       <Layout>
         <div className="error-container">
-          <h1>
-            {caught.status} {caught.statusText}
-          </h1>
+          <h1>Error</h1>
+          <pre>{error.message}</pre>
         </div>
       </Layout>
     </Document>

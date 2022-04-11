@@ -63,6 +63,7 @@ input::-webkit-inner-spin-button {
   padding: 0.5rem 1rem;
   margin: auto auto;
   font: 1.3rem sans-serif;
+  text-align: center;
 }
 
 @media only screen and (min-width: 768px) {

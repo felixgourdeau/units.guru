@@ -7,7 +7,7 @@ import { CurrencySelect } from "../currency-select/currency-select.component";
 import { Currency } from "../currency/currency";
 import { VolumeSelect } from "../volume-select/volume-select.component";
 
-export const FuelPriceForm: React.FC<{
+export const CurrencyForm: React.FC<{
   currencies: Currency[];
   formFieldRefs: FuelPriceFormFieldRefs;
   onChangeCallback: () => void;
@@ -31,7 +31,6 @@ export const FuelPriceForm: React.FC<{
 
       <div className="cell">
         <CurrencySelect inputRef={currencyRef} currencies={currencies} />
-        <VolumeSelect inputRef={volumeRef} defaultValue="L" />
       </div>
     </Form>
   );

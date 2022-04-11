@@ -1,4 +1,17 @@
-import { VOLUME_UNITS } from "./fuel-price-converter.constant";
+import { VOLUME_UNITS } from "../volume-select/volume-select.constant";
+import { FuelPriceFormFieldRefs } from "./fuel-price-converter";
+
+export const selectValuesFromFormFieldsRef = (
+  inputFieldRefs: FuelPriceFormFieldRefs,
+  outputFieldRefs: FuelPriceFormFieldRefs
+) => ({
+  sourcePrice: inputFieldRefs.priceRef.current?.value,
+  sourceCurrency: inputFieldRefs.currencyRef.current?.value,
+  sourceVolume: inputFieldRefs.volumeRef.current?.value,
+  destinationPrice: outputFieldRefs.priceRef.current?.value,
+  destinationCurrency: outputFieldRefs.currencyRef.current?.value,
+  destinationVolume: outputFieldRefs.volumeRef.current?.value,
+});
 
 export const getDestinationFuelPrice = ({
   sourcePrice,
@@ -44,4 +57,31 @@ export const getDestinationFuelPrice = ({
     destinationVolumeAmount /
     sourceRate
   );
+};
+
+export const swapForm = (
+  inputFieldRefs: FuelPriceFormFieldRefs,
+  outputFieldRefs: FuelPriceFormFieldRefs
+) => {
+  const {
+    sourcePrice,
+    sourceCurrency,
+    sourceVolume,
+    destinationPrice,
+    destinationCurrency,
+    destinationVolume,
+  } = selectValuesFromFormFieldsRef(inputFieldRefs, outputFieldRefs);
+
+  if (inputFieldRefs.priceRef.current && destinationPrice)
+    inputFieldRefs.priceRef.current.value = destinationPrice;
+  if (inputFieldRefs.currencyRef.current && destinationCurrency)
+    inputFieldRefs.currencyRef.current.value = destinationCurrency;
+  if (inputFieldRefs.volumeRef.current && destinationVolume)
+    inputFieldRefs.volumeRef.current.value = destinationVolume;
+  if (outputFieldRefs.priceRef.current && sourcePrice)
+    outputFieldRefs.priceRef.current.value = sourcePrice;
+  if (outputFieldRefs.currencyRef.current && sourceCurrency)
+    outputFieldRefs.currencyRef.current.value = sourceCurrency;
+  if (outputFieldRefs.volumeRef.current && sourceVolume)
+    outputFieldRefs.volumeRef.current.value = sourceVolume;
 };

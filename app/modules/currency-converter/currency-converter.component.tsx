@@ -1,21 +1,22 @@
 import React from "react";
 
 import {
-  getDestinationFuelPrice,
+  getDestinationPrice,
   selectValuesFromFormFieldsRef,
   swapForm,
-} from "./fuel-price-converter.selector";
-import { FuelPriceForm } from "~/modules/fuel-price-form/fuel-price-form.component";
+} from "./currency-converter.selector";
 
-import styles from "./fuel-price-converter.styles.css";
+import styles from "./currency-converter.styles.css";
 
 import { formatPrice } from "~/modules//currency-input/currency-input.selector";
-import { Currency } from "~/modules//currency/currency";
+
 import { ExchangeRates } from "~/modules/exchange-rates/exchange-rates";
+import { CurrencyForm } from "../currency-form/currency-form.component";
+import { Currency } from "~/modules/currency/currency";
 
 export const links = () => [{ rel: "stylesheet", href: styles }];
 
-export const FuelPriceConverter: React.FC<{
+export const CurrencyConverter: React.FC<{
   currencies: Currency[];
   rates: ExchangeRates["rates"];
 }> = ({ currencies, rates }) => {
@@ -32,20 +33,13 @@ export const FuelPriceConverter: React.FC<{
   };
 
   const onFormChange = () => {
-    const {
-      sourcePrice,
-      sourceCurrency,
-      sourceVolume,
-      destinationCurrency,
-      destinationVolume,
-    } = selectValuesFromFormFieldsRef(inputFieldRefs, outputFieldRefs);
+    const { sourcePrice, sourceCurrency, destinationCurrency } =
+      selectValuesFromFormFieldsRef(inputFieldRefs, outputFieldRefs);
 
-    const outputPrice = getDestinationFuelPrice({
+    const outputPrice = getDestinationPrice({
       sourcePrice,
       sourceCurrency,
-      sourceVolume,
       destinationCurrency,
-      destinationVolume,
       rates,
     });
 
@@ -68,7 +62,7 @@ export const FuelPriceConverter: React.FC<{
 
   return (
     <div className="formContainer">
-      <FuelPriceForm
+      <CurrencyForm
         currencies={currencies}
         formFieldRefs={inputFieldRefs}
         onChangeCallback={onFormChange}
@@ -82,7 +76,7 @@ export const FuelPriceConverter: React.FC<{
         &#8646;
       </button>
 
-      <FuelPriceForm
+      <CurrencyForm
         currencies={currencies}
         formFieldRefs={outputFieldRefs}
         onChangeCallback={onFormChange}

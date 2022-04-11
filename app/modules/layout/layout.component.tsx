@@ -1,4 +1,4 @@
-import { Link } from "remix";
+import { NavLink } from "remix";
 import { GithubCorner } from "~/modules/github-corner/github-corner.component";
 
 import styles from "./layout.styles.css";
@@ -11,17 +11,29 @@ export const Layout: React.FC = ({ children }) => {
       <div className="header">units &#x1f913; guru</div>
       <GithubCorner url="https://github.com/felixgourdeau/unitsguru" />
       <nav>
-        <Link prefetch="render" to="/gas">
-          Gas price
-        </Link>{" "}
+        <NavLink
+          prefetch="render"
+          to="/fuel"
+          className={({ isActive }) => (isActive ? "activeNav" : undefined)}
+        >
+          Fuel price
+        </NavLink>{" "}
         |{" "}
-        <Link prefetch="render" to="/currency">
+        <NavLink
+          prefetch="render"
+          to="/currency"
+          className={({ isActive }) => (isActive ? "activeNav" : undefined)}
+        >
           Currency
-        </Link>{" "}
+        </NavLink>{" "}
         |{" "}
-        <Link prefetch="render" to="/about">
+        <NavLink
+          prefetch="render"
+          to="/about"
+          className={({ isActive }) => (isActive ? "activeNav" : undefined)}
+        >
           About
-        </Link>
+        </NavLink>
       </nav>
       <main>{children}</main>
       <footer>
