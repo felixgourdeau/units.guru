@@ -6,7 +6,7 @@
   "sideEffects": false,
   "scripts": {
     "build": "remix build",
-    "prebuild": "rm -rf public/build",
+    "prebuild": "rm -rf public/build && rm -rf build ",
     "dev": "remix dev",
     "arc-dev": "npx arc sandbox",
     "postinstall": "remix setup node",
@@ -20,7 +20,8 @@
     "react-dom": "^17.0.2",
     "remix": "^1.3.3",
     "use-mounted-effect": "^1.0.3",
-    "use-persisted-state": "^0.3.3"
+    "use-persisted-state": "^0.3.3",
+    "usehooks-ts": "^2.4.2"
   },
   "devDependencies": {
     "@architect/architect": "^10.2.1",
@@ -30,6 +31,7 @@
     "@types/react": "^17.0.24",
     "@types/react-dom": "^17.0.9",
     "eslint": "^8.11.0",
+    "eslint-plugin-import": "^2.26.0",
     "typescript": "^4.5.5"
   },
   "engines": {

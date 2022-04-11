@@ -9,15 +9,5 @@ export const formatPrice = (value: string, requiredDecimal: number) => {
   const decimals = (roundedValue.split(/\./)?.[1] ?? "").length;
   const missingDecimal = requiredDecimal - decimals;
 
-  //console.log({
-  //  divider,
-  //  isInteger,
-  //  value,
-  //  roundedValue,
-  //  decimals,
-  //  missingDecimal,
-  //  requiredDecimal,
-  //});
-
   return `${roundedValue}${isInteger ? "." : ""}${"0".repeat(missingDecimal)}`;
 };

@@ -24,8 +24,6 @@ html, body {
   flex-direction: row;
 }
 
-.cell > :first-child { margin-right: 10px; }
-
 select {
   width: 50%;
 }
@@ -70,8 +68,6 @@ input::-webkit-inner-spin-button {
   .row {
     flex-direction: row;
   }
-
-  .cell > :first-child { margin-bottom: 10px; }
 
   input[type=number] {
     font: 1.3rem sans-serif;

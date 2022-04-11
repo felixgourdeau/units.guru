@@ -1,5 +1,3 @@
-import React from "react";
-
 import { json, LinksFunction, useLoaderData } from "remix";
 import type { LoaderFunction } from "remix";
 

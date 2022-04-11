@@ -2,10 +2,11 @@ import React from "react";
 import { Form } from "remix";
 import { FuelPriceFormFieldRefs } from "../fuel-price-converter/fuel-price-converter";
 
-import { CurrencyInput } from "../currency-input/currency-input.component";
-import { CurrencySelect } from "../currency-select/currency-select.component";
-import { Currency } from "../currency/currency";
-import { VolumeSelect } from "../volume-select/volume-select.component";
+import { CurrencyInput } from "~/modules/currency-input/currency-input.component";
+import { CurrencySelect } from "~/modules/currency-select/currency-select.component";
+import { Currency } from "~/modules/currency/currency";
+import { VolumeSelect } from "~/modules/volume-select/volume-select.component";
+import { selectDecimalsFromCurrency } from "./fuel-price-form.selector";
 
 export const FuelPriceForm: React.FC<{
   currencies: Currency[];
@@ -15,10 +16,10 @@ export const FuelPriceForm: React.FC<{
 }> = ({ currencies, formFieldRefs, onChangeCallback, type }) => {
   const { priceRef, currencyRef, volumeRef } = formFieldRefs;
 
-  const currency = currencies.find(
-    (currency) => currency.code === currencyRef.current?.value
+  const decimals = selectDecimalsFromCurrency(
+    currencyRef.current?.value,
+    currencies
   );
-  const decimals = currency?.dec ?? 2;
 
   return (
     <Form onChange={onChangeCallback} className="row">
@@ -30,8 +31,12 @@ export const FuelPriceForm: React.FC<{
       />
 
       <div className="cell">
-        <CurrencySelect inputRef={currencyRef} currencies={currencies} />
-        <VolumeSelect inputRef={volumeRef} defaultValue="L" />
+        <CurrencySelect
+          id={`selected-currency-${type}`}
+          inputRef={currencyRef}
+          currencies={currencies}
+        />
+        <VolumeSelect id={`selected-volume-${type}`} inputRef={volumeRef} />
       </div>
     </Form>
   );

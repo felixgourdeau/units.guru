@@ -5,7 +5,6 @@ import { FuelPriceFormFieldRefs } from "../fuel-price-converter/fuel-price-conve
 import { CurrencyInput } from "../currency-input/currency-input.component";
 import { CurrencySelect } from "../currency-select/currency-select.component";
 import { Currency } from "../currency/currency";
-import { VolumeSelect } from "../volume-select/volume-select.component";
 
 export const CurrencyForm: React.FC<{
   currencies: Currency[];
@@ -13,7 +12,7 @@ export const CurrencyForm: React.FC<{
   onChangeCallback: () => void;
   type: "source" | "destination";
 }> = ({ currencies, formFieldRefs, onChangeCallback, type }) => {
-  const { priceRef, currencyRef, volumeRef } = formFieldRefs;
+  const { priceRef, currencyRef } = formFieldRefs;
 
   const currency = currencies.find(
     (currency) => currency.code === currencyRef.current?.value
@@ -30,7 +29,11 @@ export const CurrencyForm: React.FC<{
       />
 
       <div className="cell">
-        <CurrencySelect inputRef={currencyRef} currencies={currencies} />
+        <CurrencySelect
+          id={`selected-currency-${type}`}
+          inputRef={currencyRef}
+          currencies={currencies}
+        />
       </div>
     </Form>
   );

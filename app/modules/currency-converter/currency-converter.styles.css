@@ -32,10 +32,9 @@
   }
 }
 
-.cell > :first-child { margin-right: 10px; }
-
 select {
   width: 50%;
+  flex: 1;
 }
 
 input[type=number], select {
@@ -67,10 +66,9 @@ input::-webkit-inner-spin-button {
 }
 
 @media only screen and (min-width: 768px) {
-  .cell > :first-child { margin-bottom: 10px; }
 
   input[type=number] {
-    /*font: 1.3rem sans-serif;*/
+    font: 1.3rem sans-serif;
     width: 100px;
     -moz-appearance: textfield;
     margin-right: 10px;

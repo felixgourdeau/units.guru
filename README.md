@@ -1,7 +1,7 @@
 # Remix test application
 ## Purpose
 
-This project is to get familiar with Remix framework and how to deploy it.
+This project is to get familiar with Remix framework and how to deploy it. It is also a template of how I organize a React application.
 
 ## Pros
 
