@@ -1,14 +1,13 @@
 import { json, LinksFunction, useLoaderData } from "remix";
 import type { LoaderFunction } from "remix";
 
-import { fetchRates } from "~/modules/exchange-rates/exchange-rates.server";
-import { Currency } from "~/modules/currency/currency";
-import { selectAvailableCurrenciesFromRates } from "~/modules/currency/currency.server";
-
 import {
   CurrencyConverter,
   links as currencyConverterStyles,
 } from "~/modules/currency-converter/currency-converter.component";
+import { Currency } from "~/modules/currency/currency";
+import { selectAvailableCurrenciesFromRates } from "~/modules/currency/currency.server";
+import { fetchRates } from "~/modules/exchange-rates/exchange-rates.server";
 
 export const links: LinksFunction = () => {
   return [...currencyConverterStyles()];

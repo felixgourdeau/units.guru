@@ -1,10 +1,11 @@
 import React from "react";
-import { Form } from "remix";
-import { FuelPriceFormFieldRefs } from "../fuel-price-converter/fuel-price-converter";
 
-import { CurrencyInput } from "../currency-input/currency-input.component";
-import { CurrencySelect } from "../currency-select/currency-select.component";
-import { Currency } from "../currency/currency";
+import { Form } from "remix";
+
+import { CurrencyInput } from "~/modules/currency-input/currency-input.component";
+import { CurrencySelect } from "~/modules/currency-select/currency-select.component";
+import { Currency } from "~/modules/currency/currency";
+import { FuelPriceFormFieldRefs } from "~/modules/fuel-price-converter/fuel-price-converter";
 
 export const CurrencyForm: React.FC<{
   currencies: Currency[];

@@ -1,5 +1,7 @@
 import React from "react";
+
 import { useLocalStorage } from "usehooks-ts";
+
 import { DEFAULT_VALUES } from "~/constants";
 
 import { VOLUME_UNITS } from "./volume-select.constant";
@@ -15,7 +17,7 @@ export const VolumeSelect: React.FC<{
 
   React.useEffect(() => {
     if (inputRef.current?.value) inputRef.current.value = selectedVolume;
-  }, []);
+  }, [selectedVolume, inputRef]);
 
   return (
     <select

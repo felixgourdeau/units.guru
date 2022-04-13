@@ -1,17 +1,16 @@
 import React from "react";
 
+import { formatPrice } from "~/modules//currency-input/currency-input.selector";
+import { Currency } from "~/modules//currency/currency";
+import { ExchangeRates } from "~/modules/exchange-rates/exchange-rates";
+import { FuelPriceForm } from "~/modules/fuel-price-form/fuel-price-form.component";
+
 import {
   getDestinationFuelPrice,
   selectValuesFromFormFieldsRef,
   swapForm,
 } from "./fuel-price-converter.selector";
-import { FuelPriceForm } from "~/modules/fuel-price-form/fuel-price-form.component";
-
 import styles from "./fuel-price-converter.styles.css";
-
-import { formatPrice } from "~/modules//currency-input/currency-input.selector";
-import { Currency } from "~/modules//currency/currency";
-import { ExchangeRates } from "~/modules/exchange-rates/exchange-rates";
 
 export const links = () => [{ rel: "stylesheet", href: styles }];
 

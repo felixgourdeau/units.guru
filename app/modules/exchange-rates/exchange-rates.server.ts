@@ -1,4 +1,5 @@
 import mockedRates from "~/statics/json/mocked-rates.json";
+
 import { ExchangeRates } from "./exchange-rates";
 
 export const fetchRates = async () => {

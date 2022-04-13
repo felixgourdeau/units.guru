@@ -1,4 +1,5 @@
 import React from "react";
+
 import { formatPrice } from "./currency-input.selector";
 
 export const CurrencyInput: React.FC<{

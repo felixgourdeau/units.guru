@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useEffect, useState, FC, RefObject } from "react";
+
 import { useLocalStorage } from "usehooks-ts";
-import { DEFAULT_VALUES } from "~/constants";
+
+import { DEFAULT_FAVORITE_CURRENCY_CODES, DEFAULT_VALUES } from "~/constants";
 import { Currency } from "~/modules/currency/currency";
 
 const formatCurrencyItem = (name: string, symbol: string) =>
@@ -17,43 +19,55 @@ const renderCurrencyItem = (currency: Currency | undefined) => {
   );
 };
 
-export const CurrencySelect: React.FC<{
+export const CurrencySelect: FC<{
   id: string;
   currencies: Currency[];
-  inputRef: React.RefObject<HTMLSelectElement>;
+  inputRef: RefObject<HTMLSelectElement>;
 }> = ({ currencies, inputRef, id }) => {
   const [selectedCurrency, setSelectedCurrency] = useLocalStorage<string>(
     id,
     DEFAULT_VALUES[id]
   );
 
-  const [favoriteCurrencyCodes, setFavoriteCurrencyCodes] = useLocalStorage<
-    Array<string>
-  >("favorite-currency-codes", DEFAULT_VALUES["favorite-currency-codes"]);
+  const [savedFavoriteCurrencyCodes, setSavedFavoriteCurrencyCodes] =
+    useLocalStorage<Array<string>>(
+      "favorite-currency-codes",
+      DEFAULT_FAVORITE_CURRENCY_CODES
+    );
+
+  const [favoriteCurrencyCodes, setFavoriteCurrencyCodes] = useState<string[]>(
+    []
+  );
 
   const appendFavoriteCurrencyCode = (code: string) => {
     if (favoriteCurrencyCodes?.includes(code)) return;
+    setSavedFavoriteCurrencyCodes([...favoriteCurrencyCodes, code]);
     setFavoriteCurrencyCodes([...favoriteCurrencyCodes, code]);
   };
 
-  const favoriteCurrencies = DEFAULT_VALUES["favorite-currency-codes"]
-    ?.map((defaultCurrency) => {
+  const favoriteCurrencies = favoriteCurrencyCodes
+    .map((defaultCurrency) => {
       return currencies.find((currency) => currency.code === defaultCurrency);
     })
     .filter(Boolean);
 
-  React.useEffect(() => {
-    if (inputRef.current?.value && selectedCurrency)
-      inputRef.current.value = selectedCurrency;
-  }, [selectedCurrency, inputRef]);
+  useEffect(() => {
+    setFavoriteCurrencyCodes(savedFavoriteCurrencyCodes);
+  }, [savedFavoriteCurrencyCodes]);
 
-  console.log("selectedCurrency", id, selectedCurrency);
+  React.useEffect(() => {
+    if (
+      inputRef.current?.value &&
+      selectedCurrency &&
+      savedFavoriteCurrencyCodes
+    )
+      inputRef.current.value = selectedCurrency;
+  }, [selectedCurrency, inputRef, savedFavoriteCurrencyCodes]);
 
   return (
     <select
       id={id}
       ref={inputRef}
-      //defaultValue={DEFAULT_VALUES[id]}
       onChange={(event) => {
         setSelectedCurrency(event.target.value);
         appendFavoriteCurrencyCode(event.target.value);

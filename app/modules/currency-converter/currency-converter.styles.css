@@ -6,7 +6,7 @@
 .arrow {
   font: 1.6rem sans-serif;
   align-self: center;
-  padding: 0.5em 0em;
+  padding: 0.5em 0.2em;
   transform: rotate(-90deg);
   -webkit-transform: rotate(-90deg);
   -moz-transform: rotate(-90deg);

@@ -1,4 +1,5 @@
-import { VOLUME_UNITS } from "../volume-select/volume-select.constant";
+import { VOLUME_UNITS } from "~/modules/volume-select/volume-select.constant";
+
 import { FuelPriceFormFieldRefs } from "./fuel-price-converter";
 
 export const selectValuesFromFormFieldsRef = (
