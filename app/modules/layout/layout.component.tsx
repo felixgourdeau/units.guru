@@ -1,4 +1,4 @@
-import { NavLink } from "remix";
+import { NavLink } from "@remix-run/react";
 
 import { GithubCorner } from "~/modules/github-corner/github-corner.component";
 

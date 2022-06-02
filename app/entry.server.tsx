@@ -1,6 +1,6 @@
+import { RemixServer } from "@remix-run/react";
+import type { EntryContext } from "@remix-run/server-runtime";
 import { renderToString } from "react-dom/server";
-import { RemixServer } from "remix";
-import type { EntryContext } from "remix";
 
 export default function handleRequest(
   request: Request,
@@ -13,6 +13,10 @@ export default function handleRequest(
   );
 
   responseHeaders.set("Content-Type", "text/html");
+  //responseHeaders.set(
+  //  "Cache-Control",
+  //  "max-age=0, s-maxage=10, stale-while-revalidate"
+  //);
 
   return new Response("<!DOCTYPE html>" + markup, {
     status: responseStatusCode,

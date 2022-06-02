@@ -6,9 +6,5 @@ preferences.arc
 sam.json
 sam.yaml
 .env
-.remix
-
-/cypress/screenshots
-/cypress/videos
 
 /app/styles/tailwind.css

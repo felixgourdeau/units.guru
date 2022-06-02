@@ -1,4 +1,4 @@
-import { Currency } from "~/modules/currency/currency";
+import type { Currency } from "~/modules/currency/currency";
 
 export const selectDecimalsFromCurrency = (
   currencyCode: string | undefined,

@@ -1,21 +1,15 @@
-import {
-  Links,
+import { Links, LiveReload, Meta, Outlet, Scripts } from "@remix-run/react";
+import type {
+  MetaFunction,
   LinksFunction,
-  LiveReload,
-  Meta,
-  Outlet,
-  Scripts,
-  useCatch,
-} from "remix";
-import type { MetaFunction } from "remix";
+} from "@remix-run/react/routeModules";
 
+import styles from "app/styles/main.css";
 import { links as githubCornerStyles } from "~/modules/github-corner/github-corner.component";
 import {
   Layout,
   links as layoutStyles,
 } from "~/modules/layout/layout.component";
-
-import styles from "app/styles/main.css";
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
@@ -29,7 +23,12 @@ export const links: LinksFunction = () => {
     ...githubCornerStyles(),
     ...layoutStyles(),
     { rel: "stylesheet", href: styles },
-    { rel: "manifest", href: "app.webmanifest" },
+    { rel: "manifest", href: "_static/app.webmanifest" },
+    {
+      rel: "icon",
+      href: "/_static/favicon.ico",
+      type: "image/png",
+    },
   ];
 };
 

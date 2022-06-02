@@ -1,7 +1,7 @@
-import { ExchangeRates } from "~/modules/exchange-rates/exchange-rates";
+import type { ExchangeRates } from "~/modules/exchange-rates/exchange-rates";
 import currencyData from "~/statics/json/currency-data.json";
 
-import { Currency } from "./currency";
+import type { Currency } from "./currency";
 
 export const selectAvailableCurrenciesFromRates = (
   rates: ExchangeRates["rates"]

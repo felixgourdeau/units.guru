@@ -2,8 +2,8 @@ import React from "react";
 
 import { formatPrice } from "~/modules//currency-input/currency-input.selector";
 import { CurrencyForm } from "~/modules/currency-form/currency-form.component";
-import { Currency } from "~/modules/currency/currency";
-import { ExchangeRates } from "~/modules/exchange-rates/exchange-rates";
+import type { Currency } from "~/modules/currency/currency";
+import type { ExchangeRates } from "~/modules/exchange-rates/exchange-rates";
 
 import {
   getDestinationPrice,

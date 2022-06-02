@@ -1,20 +1,34 @@
-# Remix test application
-## Purpose
+# units 🤓 guru
 
-This project is to get familiar with Remix framework and how to deploy it. It is also a template of how I organize a React application.
+This repo is a small application to convert gas price and currency from different country. For every request, it pulls the latest exchange rate, and converts the amount to the target currency. The main purpose of this repository is to test [remix.run](https://remix.run) framework and its integration with lambdas.
 
-## Pros
+You can view a live demo at [units.guru](https://units.guru)
 
-* Remix router is gold
-* Simple colocation with server side data and client side render
+## Development
 
-## Cons
+- Install dependencies and build the application
 
-* Need to import CSS in routes component to get it working
-* Arc.codes is a bit of a mess to deploy to lambda, and you need to manually handle the domain name. 
+  ```sh
+  npm run install && npm run build
+  ```
 
+- Start dev server:
 
-## Ideas
+  ```sh
+  npm run dev
+  ```
 
-* Write a script that packages/deploy the lambda and upload static files to S3
-* Develop a serverless framework plugin
+This starts your app in development mode, rebuilding assets on file changes.
+
+## Issue
+
+- remix.run use npm, and it's not possible to use yarn
+- I was unable to strap a cnd in front of the generated cloudformation template
+- the lambda integration is far from perfect from a developer point of view. you are locked with the architect framework, and no integration is possible out of the box with terraform
+
+## Todo
+
+- [ ] Setup CI with github action
+- [ ] Add some integration test with cypress
+- [ ] Stop serving javascript client side and use the power of remix.run
+- [ ] cleanup the repo

@@ -1,14 +1,17 @@
 @app
 unitsguru
 
+@http
+/*
+  method any
+  src server
+
 @aws
+runtime nodejs14.x
+memory 128
+region ca-central-1
 profile felixgourdeau
-region us-west-2
-architecture arm64
-
-@plugins
-architect/plugin-remix
-
-@remix
 
 @static
+prune true
+spa true
