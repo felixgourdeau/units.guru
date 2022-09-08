@@ -15,7 +15,6 @@ export const links: LinksFunction = () => {
 };
 
 export const loader: LoaderFunction = async ({ request, context, params }) => {
-  console.log("/currency", { request, context, params });
   const rates = await fetchRates();
   const currencies = selectAvailableCurrenciesFromRates(rates);
 

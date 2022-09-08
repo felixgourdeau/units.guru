@@ -1,8 +1,8 @@
 import React from "react";
 
 import { formatPrice } from "~/modules//currency-input/currency-input.selector";
-import { Currency } from "~/modules//currency/currency";
-import { ExchangeRates } from "~/modules/exchange-rates/exchange-rates";
+import type { Currency } from "~/modules//currency/currency";
+import type { ExchangeRates } from "~/modules/exchange-rates/exchange-rates";
 import { FuelPriceForm } from "~/modules/fuel-price-form/fuel-price-form.component";
 
 import {

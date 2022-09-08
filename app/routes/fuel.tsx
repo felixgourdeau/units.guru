@@ -18,8 +18,6 @@ export const loader: LoaderFunction = async ({ request, context, params }) => {
   const rates = await fetchRates();
   const currencies = selectAvailableCurrenciesFromRates(rates);
 
-  console.log("/fuel", { request, context, params, rates, currencies });
-
   return json({ rates, currencies });
 };
 
@@ -28,8 +26,6 @@ export default () => {
     rates: Record<string, number>;
     currencies: Currency[];
   }>();
-
-  console.log("/fuel1", { rates, currencies });
 
   return <FuelPriceConverter rates={rates} currencies={currencies} />;
 };

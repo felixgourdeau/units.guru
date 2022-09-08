@@ -10,7 +10,7 @@ export const Layout: React.FC = ({ children }) => {
   return (
     <>
       <div className="header">units &#x1f913; guru</div>
-      <GithubCorner url="https://github.com/felixgourdeau/unitsguru" />
+      <GithubCorner url="https://github.com/felixgourdeau/units.guru" />
       <nav>
         <NavLink
           prefetch="render"
@@ -38,7 +38,7 @@ export const Layout: React.FC = ({ children }) => {
       </nav>
       <main>{children}</main>
       <footer>
-        <p>© 2022 Félix Gourdeau Inc. All Rights Reserved.</p>
+        <p>© 2022 Félix Gourdeau Inc.</p>
       </footer>
     </>
   );

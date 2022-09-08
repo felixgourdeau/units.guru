@@ -1,4 +1,4 @@
-import { CurrencyFormFieldRefs } from "./currency-converter";
+import type { CurrencyFormFieldRefs } from "./currency-converter";
 
 export const selectValuesFromFormFieldsRef = (
   inputFieldRefs: CurrencyFormFieldRefs,

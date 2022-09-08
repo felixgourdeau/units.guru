@@ -49,7 +49,6 @@ input[type=number], select {
 }
 
 input[type=number] {
-  /*font: 1.3rem sans-serif;*/
   width: 100%;
   -moz-appearance: textfield;
   margin-bottom: 10px;

@@ -13,10 +13,6 @@ export default function handleRequest(
   );
 
   responseHeaders.set("Content-Type", "text/html");
-  //responseHeaders.set(
-  //  "Cache-Control",
-  //  "max-age=0, s-maxage=10, stale-while-revalidate"
-  //);
 
   return new Response("<!DOCTYPE html>" + markup, {
     status: responseStatusCode,

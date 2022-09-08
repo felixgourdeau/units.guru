@@ -1,9 +1,10 @@
-import React, { useEffect, useState, FC, RefObject } from "react";
+import type { FC, RefObject } from "react";
+import React, { useEffect, useState } from "react";
 
 import { useLocalStorage } from "usehooks-ts";
 
 import { DEFAULT_FAVORITE_CURRENCY_CODES, DEFAULT_VALUES } from "~/constants";
-import { Currency } from "~/modules/currency/currency";
+import type { Currency } from "~/modules/currency/currency";
 
 const formatCurrencyItem = (name: string, symbol: string) =>
   `${name?.replace(/(.{16})..+/, "$1…")} (${symbol})`;
