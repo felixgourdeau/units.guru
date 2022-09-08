@@ -1,6 +1,6 @@
 # units 🤓 guru
 
-This repo is a small application to convert gas price and currency from different country. For every request, it pulls the latest exchange rate, and converts the amount to the target currency. The main purpose of this repository is to test [remix.run](https://remix.run) framework and its integration with lambdas.
+units.guru is a web application that convert gas price and currency from different country. For every request, it pulls the latest exchange rate, and converts the amount to the target currency. The main purpose of this repository is to test [remix.run](https://remix.run) framework and its integration with lambdas.
 
 You can view a live demo at [units.guru](https://units.guru)
 
@@ -28,7 +28,7 @@ This starts your app in development mode, rebuilding assets on file changes.
 
 ## Todo
 
-- [ ] Setup CI with github action
-- [ ] Add some integration test with cypress
-- [ ] Stop serving javascript client side and use the power of remix.run
+- [x] Setup CI with github action
+- [ ] Add integration test with cypress
+- [ ] Add unit test
 - [ ] cleanup the repo
